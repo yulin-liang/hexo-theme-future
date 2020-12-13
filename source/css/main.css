@@ -1,0 +1,171 @@
+/* #################### 全局 #################### */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav {
+    height: 50px;
+    background: #b9e1b1;
+}
+
+#content {
+    height: 100%;
+    padding-left: 0px;
+    background: #f9f7ed;
+}
+
+/* #################### index_aside #################### */
+.left-aside {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    background: #fff;
+    padding: 50px 30px 80px;
+    text-align: center;
+    border-right: 1px solid #d9d9d9;
+    box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.35);
+}
+
+.left-aside .profile-icon img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    transition: All ease-in-out 0.4s;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0 0 5px #95a5a6;
+}
+
+.left-aside .profile-icon img:hover {
+    -webkit-transform: translate(0px, -10px);
+            transform: translate(0px, -10px); 
+}
+
+.left-aside .intro-author {
+    margin: 30px 0 30px;
+}
+
+.left-aside .intro-description {
+    font-weight: 500;
+    font-size: medium;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.left-aside .menu {
+    margin-top: 100 px;
+    height: 50%;
+    align-items: center;
+}
+
+.left-aside .menu li {
+    margin: 30px 0 30px;
+    vertical-align: middle;
+    list-style: none;
+}
+
+.left-aside li a {
+    text-decoration: none;
+    color: black;
+}
+
+.left-aside .menu li img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border:2px solid black;
+}
+
+.left-aside .menu li span {
+    padding-left: 20px;
+    vertical-align: middle;
+    font-weight: 800;
+}
+
+.left-aside .social-media {
+    margin-top: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.left-aside .social-media li {
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
+
+.left-aside .social-media img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+/* #################### index content #################### */
+
+.index-content {
+    margin-left: 360px;
+    margin-top: 65px;
+    padding-left: 50px;
+    float: left;
+    width: calc(100% - 360px);
+    height: 100%;
+}
+
+.index-content .item {
+    width: 600px;
+    margin: 23px 0px;
+    border-bottom: 1px dashed #d9d9d9;
+}
+
+.index-content .item a {
+    color: #555555;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5; 
+}
+.index-content .item a:hover {
+    color: #21D4FD;
+    background: linear-gradient(30deg, #0c7bb3, #f2bae8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    overflow: auto;
+ }
+.subtitle li {
+    float: left;
+    list-style: none;
+    margin: 8px 8px 8px 0px;
+    font-size: 12px;
+    color: #717171; 
+}
+
+/* #################### 导航 #################### */
+nav #menu {
+    float: right;
+    padding-right: 20px;
+}
+nav ul li {
+    float: left;
+    padding: 10px;
+    list-style: none;
+}
+nav ul li a{
+    color: #555;
+    font-size: 12px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    border-bottom: 1px solid;
+}
+/* #################### 导航 #################### */

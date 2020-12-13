@@ -1,0 +1,27 @@
+title: IT Abyss Wiki
+
+author: 猴子请来的救兵
+description: Make coding more interesting
+avatar: https://i.loli.net/2020/12/09/liWow1fZmFVJEYO.jpg
+
+menus: 
+  主页: /
+  标签: /tags
+  分类: /categories
+  归档: /archive
+  关于: /about
+
+menu_icons:
+  主页: images/home.svg
+  标签: images/tags.svg
+  分类: images/categories.svg
+  归档: images/archive.svg
+  关于: images/profile.svg
+
+leftBackground: https://i.loli.net/2020/12/09/C79FTYjh31ibdNZ.jpg
+
+links:
+  github: https://github.com/yulin-liang
+  linkedin: https://www.linkedin.com/in/yulinliang/
+  weibo: ylliangsysu@gmail.com
+  rss: www.google.com

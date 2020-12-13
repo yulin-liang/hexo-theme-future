@@ -1,0 +1,45 @@
+<div class="left-aside">
+    <!-- Profile Icon -->
+    <div class="profile-icon">
+        <img src="<%= theme.avatar %>">
+    </div>
+
+    <!-- Self Introductions -->
+    <div class="intro">
+        <h2 class="intro-author"><%= theme.author %></h2>
+        <p class="intro-description"><%= theme.description %></p>
+    </div>
+
+    <!-- Blog Menus -->
+    <div class="menu">
+        <ul>
+            <% for (var menu in theme.menus) { %>
+                <li>
+                    <a href="<%- url_for(theme.menus[menu]) %> ">
+                        <img src="<%- theme.menu_icons[menu] %>"/>
+                        <span><%= menu %></span>
+                    </a>
+                </li>
+            <% } %> 
+        </ul>
+    </div>
+
+    <div class="social-media">
+        <ul>
+            <% for (var link in theme.links) { %>
+                <li>
+                    <a href="<%- url_for(theme.links[link]) %>">
+                        <img src="images/<%- link %>.svg"/>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</div>
+<script>
+    var leftBackgroundUrl = '<%- theme.leftBackground %>';
+    var homeLeftAsideNode = document.getElementsByClassName('left-aside')[0];
+    if (homeLeftAsideNode) {
+      homeLeftAsideNode.style.backgroundImage = 'url(' + leftBackgroundUrl + ')';
+    }
+</script>

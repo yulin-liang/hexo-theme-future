@@ -1,0 +1,11 @@
+<div class="index-content">
+    <!-- 文章索引 -->
+    <div class="post-list">
+        <div>
+            <!-- <%= page.posts.length %> -->
+            <% page.posts.each(function(post, index) { %>           
+                <%- partial('index_title',{post: post}) %>
+            <%  }) %>
+        </div>
+    </div>
+</div>
