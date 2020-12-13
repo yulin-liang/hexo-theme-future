@@ -1,8 +1,1 @@
-<div>
-    <span id="post-author">作者: <%- theme.author %></span>
-    <span id="post-date"><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></span>
-</div>
-
-<div id="article">
-    <%- page.content %>
-</div>
+<%- partial('_partial/article.ejs', {post: page}) %>

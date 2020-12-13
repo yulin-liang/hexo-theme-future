@@ -6,6 +6,7 @@
 
     <!-- 引入css配置文件 -->
     <%- css('css/main.css') %> 
+    <%- css('css/article.css') %> 
 
     <!-- 字体图片集 -->
     <% css('lib/font-awesome/css/font-awesome.min.css') %> 
@@ -23,6 +24,35 @@
 
     <!-- 引入js文件 -->
     <%- js('js/main.js') %> 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.2.1/trianglify.min.js"></script>
+    <script>
+        const pageFirstChild = document.querySelector('.navbar-header');
+        var pattern = Trianglify({
+            width: window.innerWidth,
+            height: 230
+        });
 
+        function deletePatternPlaceholder() {
+            const patternPlaceholder = document.getElementById('pattern-placeholder');
+            const parent = patternPlaceholder.parentElement;
+            parent.removeChild(patternPlaceholder);
+        }
+        if (pageFirstChild) {
+            document.body.insertBefore(pattern.canvas(), pageFirstChild);
+            deletePatternPlaceholder();
+            toggleHeaderNavBar();
+        }
+        function toggleHeaderNavBar() {
+            document.addEventListener('scroll', function() {
+                const offset = window.pageYOffset;
+                if (offset > 128) {
+                pageFirstChild.classList.add('fixed-header');
+                }
+                if (offset <= 128) {
+                pageFirstChild.classList.remove('fixed-header');
+                }
+            });
+        }
+    </script> -->
 </body>
 </html>
