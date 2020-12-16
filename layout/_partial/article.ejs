@@ -25,6 +25,25 @@
         <div class="article-comments" id="comments">
             <%- partial('comments') %>
         </div>
+
+        <% if (post.prev || post.next) { %>
+            <div class="article-navigation">
+                <% if (post.prev) { %>
+                    <a href="<%- url_for(post.prev.path) %>" id="article-nav-previous" class="article-nav-link">
+                        <i class="icon-circle-left"></i>
+                        <div class="article-nav-title">
+                            <%= post.prev.title %>
+                        </div>
+                    </a>
+                <% } %>
+                <% if(post.next) { %>
+                    <a href="<%- url_for(post.next.path) %>" id="article-nav-next" class="article-nav-link-wrap">
+                        <div class="article-nav-title"><%= post.next.title %></div>
+                        <div class="icon-circle-right"></div>
+                    </a>
+                <% } %>   
+            </div>
+        <% } %> 
     </div>
     <div class="footer">
         <p>
