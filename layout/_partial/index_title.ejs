@@ -1,7 +1,7 @@
 <div class="item">
     <div class="title">
-        <a href="<% post.link ? url_for(post.link) : url_for(post.path) %> ">
-            <%= post.title %> - <%= post.link %> - <%= url_for(post.path) %>
+        <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
+            <%= post.title %>
         </a>
         <div class="subtitle">
             <ul>
