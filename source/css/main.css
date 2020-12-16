@@ -27,11 +27,19 @@ li.center {
 }
 
 /* #################### index_aside #################### */
+/* .right-aside {
+    width: 300px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #d9d9d9;
+} */
+
 .left-aside {
     width: 300px;
     height: 100%;
     position: fixed;
-    background: #fff;
+    background: green;
     text-align: center;
     border-right: 1px solid #d9d9d9;
     box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.35);
@@ -75,6 +83,10 @@ li.center {
     margin-top: 100 px;
     height: 50%;
     align-items: center;
+}
+
+.left-aside .menu ul{
+    padding-left: 0;
 }
 
 .left-aside .menu li {
@@ -125,8 +137,8 @@ li.center {
 
 .left-aside .social-media img {
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     filter: invert(97%) sepia(6%) saturate(5%) hue-rotate(314deg) brightness(88%) contrast(98%);
 }
@@ -166,7 +178,12 @@ li.center {
 
 .subtitle {
     overflow: auto;
+    padding: 0;
  }
+
+.subtitle ul {
+    padding: 1px;
+}
 
 .subtitle li {
     float: left;

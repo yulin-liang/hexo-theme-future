@@ -8,8 +8,9 @@
     <%- css('css/main.css') %> 
     <%- css('css/article.css') %> 
 
+    <%- css('lib/bootstrap/css/bootstrap.min.css') %>
     <!-- 字体图片集 -->
-    <% css('lib/font-awesome/css/font-awesome.min.css') %> 
+    <%- css('lib/font-awesome/css/font-awesome.min.css') %> 
 
 </head>
 <body>
@@ -19,11 +20,11 @@
         <div id="content">
             <%- body %>
         </div>
-
     </div>
 
     <!-- 引入js文件 -->
     <%- js('js/main.js') %> 
+    <%- js('lib/bootstrap/js/bootstrap.min.js') %>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.2.1/trianglify.min.js"></script>
     <script>
         const pageFirstChild = document.querySelector('.navbar-header');
