@@ -32,10 +32,17 @@ li.center {
     height: 100%;
     position: fixed;
     background: #fff;
-    padding: 50px 30px 80px;
     text-align: center;
     border-right: 1px solid #d9d9d9;
     box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.35);
+}
+
+.left-aside .cover {
+    background: rgba(0, 0, 0, 0.35);
+    height: 100%;
+    width: auto;
+    padding: 50px 30px 80px;
+    color: #d9d9d9;
 }
 
 .left-aside .profile-icon img{
@@ -78,7 +85,11 @@ li.center {
 
 .left-aside li a {
     text-decoration: none;
-    color: black;
+    color: #d9d9d9;
+}
+
+.left-aside li a:hover {
+    color: #f1f1f1;
 }
 
 .left-aside .menu li img {
@@ -86,7 +97,12 @@ li.center {
     height: 20px;
     vertical-align: middle;
     border-radius: 50%;
-    border:2px solid black;
+    border:2px solid #000000;
+    filter: invert(97%) sepia(6%) saturate(5%) hue-rotate(314deg) brightness(88%) contrast(98%);
+}
+
+.left-aside li a:hover img {
+    filter: invert(100%) sepia(37%) saturate(104%) hue-rotate(239deg) brightness(112%) contrast(89%);
 }
 
 .left-aside .menu li span {
@@ -112,6 +128,7 @@ li.center {
     width: 30px;
     height: 30px;
     padding: 10px;
+    filter: invert(97%) sepia(6%) saturate(5%) hue-rotate(314deg) brightness(88%) contrast(98%);
 }
 
 /* #################### index content #################### */
