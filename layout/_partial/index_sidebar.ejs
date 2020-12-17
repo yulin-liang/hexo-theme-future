@@ -1,0 +1,69 @@
+<!-- <div class="card profile-card text-center">
+    <div class="profile-icon mt-4">
+        <img src="<%= theme.avatar %>">
+    </div>
+
+    <div class="intro">
+        <h5 class="intro-author my-2"><%= theme.author %></h5>
+        <p class="intro-description my-2"><%= theme.description %></p>
+    </div>
+
+    <div class="container my-3">
+        <div class="row">
+            <div class="col my-0">
+                <p class="font-bold mb-1">文章</p>
+                <p class="clear-margin"><%= site.posts.length %></p>
+            </div>
+            <div class="col col-border">
+                <p class="font-bold mb-1">分类</p>
+                <p class="clear-margin"><%= site.tags.length %></p>
+            </div>
+            <div class="col">
+                <p class="font-bold mb-1">标签</p>
+                <p class="clear-margin"><%- site.categories.length %> </p>
+            </div>
+        </div>
+        
+    </div>
+</div> -->
+
+<div class="container self-profile-card p-0"> 
+    <div class="row no-gutters" style=" padding:0 12px 0 12px;">
+        <div class="col-3 right-border no-gutters p-0" >
+            <img src="<%= theme.avatar %>">
+        </div>
+
+        <div class="col-9">
+            <div class="container my-4 no-gutters p-0">
+                <div class="intro">
+                    <h5 class="intro-author my-2"><%= theme.author %></h5>
+                    <p class="intro-description my-2"><%= theme.description %></p>
+                </div>
+                    
+                <div class="row my-4">
+                    <div class="col text-center">
+                        <p class="font-bold mb-1">文章</p>
+                        <p class="clear-margin"><%= site.posts.length %></p>
+                    </div>
+                    <div class="col col-border text-center">
+                        <p class="font-bold mb-1">分类</p>
+                        <p class="clear-margin"><%= site.tags.length %></p>
+                    </div>
+                    <div class="col text-center">
+                        <p class="font-bold mb-1">标签</p>
+                        <p class="clear-margin"><%- site.categories.length %> </p>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br/>
+<br/>
+<div class="container self-profile-card primary-color">
+    <div class="fix">
+        test
+    </div> 
+</div>
