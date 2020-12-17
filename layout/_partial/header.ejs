@@ -2,6 +2,7 @@
     <div class="img-container">
         <div class="cover">
 
+            <!-- 引导栏 -->
             <ul class="nav justify-content-end nav-btn">
                 <% for (var menu in theme.menus) { %>
                     <li class="nav-item">
@@ -13,13 +14,13 @@
                 <% } %> 
             </ul>
 
+            <!-- 头像和名字 -->
             <div class="container parent-size header-margin">
                 <div class="container text-center">
                     <div class="profile-icon">
                         <img src="<%= theme.avatar %>">
                     </div>
                 
-                    <!-- Self Introductions -->
                     <div class="intro">
                         <h2 class="intro-author"><%= theme.author %></h2>
                     </div>
@@ -27,6 +28,7 @@
                 </div>
             </div>
 
+            <!-- 社交链接 -->
             <div class="container social-media">
                 <ul class="nav justify-content-center social-btn">
                     <% for (var link in theme.links) { %>
