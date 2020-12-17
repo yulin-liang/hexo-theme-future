@@ -1,0 +1,44 @@
+<!-- <div class="index-content">
+    <div class="row">
+        <div class="post-list col-6 justify-content-md-center">
+            <div>
+                <% page.posts.each(function(post, index) { %>           
+                    <%- partial('index_title',{post: post}) %>
+                <%  }) %>
+            </div>
+        </div>
+        <div class="col bg-primary">
+            <%- partial('index_right_sider') %> 
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="index-content container">
+    <div class="row">
+        <div class="post-list col-6 justify-content-md-center">
+            <div>
+                <% page.posts.each(function(post, index) { %>           
+                    <%- partial('index_title',{post: post}) %>
+                <%  }) %>
+            </div>
+        </div>
+        <div class="col-sm bg-primary">
+            <%- partial('index_right_sider') %> 
+        </div>
+    </div>
+</div> -->
+
+<div class="index-content">
+<div class="container">
+    <div class="row">
+        <div class="col-8 bg-primary justify-content-md-center">
+            <% page.posts.each(function(post, index) { %>           
+                <%- partial('index_title',{post: post}) %>
+            <%  }) %>
+        </div>
+        <div class="col">
+            <%- partial('index_right_sider') %> 
+        </div>
+      </div>
+  </div>
+</div>

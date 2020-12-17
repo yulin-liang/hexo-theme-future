@@ -1,3 +1,31 @@
+/* #################### variables ############### */
+:root {
+    --background-color: #C4DCF1
+}
+
+.test {
+    background-color: var(--background-color);
+}
+
+.img-container {
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-container .cover {
+    background: rgba(0, 0, 0, 0.35);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    padding: 50px 30px 80px;
+    color: #d9d9d9;
+}
+
+
 /* #################### 全局 #################### */
 * {
     margin: 0;
@@ -7,7 +35,9 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     font-family: 'Source Sans Pro', sans-serif;
+    min-height: 100%;
 }
 
 nav {
@@ -26,6 +56,11 @@ li.center {
     display: inline;
 }
 
+.full-height {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
 /* #################### index_aside #################### */
 /* .right-aside {
     width: 300px;
