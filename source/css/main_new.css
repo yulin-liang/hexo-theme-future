@@ -53,6 +53,12 @@ html, body {
     border-right: black dashed  2px;
 }
 
+.card-style {
+    border-radius: 12px;
+    border: #ddd solid 2px;
+    box-shadow: 2px 2px rgba(208, 208, 208, 0.35);
+}
+
 
 /* #################### 首页头部 #################### */
 
@@ -169,11 +175,6 @@ html, body {
             transform: translate(0px, -10px); 
 }
 
-.self-profile-card {
-    border-radius: 12px;
-    border: #ddd solid 1px;
-}
-
 .self-profile-card img {
     margin: 0;
     width: 100%;
@@ -185,5 +186,47 @@ html, body {
 }
 
 .self-profile-card .intro {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* #################### index content #################### */
+
+.index-content .item {
+    width: 800px;
+    padding: 2;
+    padding: 20px 0px 12px;
+    border-bottom: 1px dashed #d9d9d9;
+}
+
+.index-content .item a {
+    color: #555555;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5; 
+    text-decoration: none;
+}
+
+.index-content .item a:hover {
+    color: #21D4FD;
+    background: linear-gradient(30deg, #0c7bb3, #f2bae8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    overflow: auto;
+    padding: 0;
+ }
+
+.subtitle ul {
+    padding: 1px;
+}
+
+.subtitle li {
+    float: left;
+    list-style: none;
+    margin: 10px 8px 8px 0px;
+    font-size: 12px;
+    color: #717171; 
 }

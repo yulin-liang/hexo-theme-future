@@ -1,11 +1,11 @@
 <%- partial('header.ejs') %> 
 <div class="container my-5">
     <div class="row justify-content-between">
-        <div class="col-4">
+        <div class="col-3">
             <%- partial('index_sidebar.ejs') %> 
         </div>
-        <div class="col-8" style="background-color: blue;">
-            test1
+        <div class="col-9 card-style">
+            <%- partial('post_list.ejs', {page: page}) %> 
         </div>
     </div>
 </div>

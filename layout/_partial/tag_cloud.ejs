@@ -1,0 +1,14 @@
+<div>
+    <% if (site.tags.length) { %>
+        <script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcloud.js') %>"></script>
+        <script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcanvas.js') %>"></script>
+        <div class="widget-wrap">
+          <p class="font-bold mb-1">标签云</p>
+          <div id="myCanvasContainer" class="widget tagcloud">
+            <canvas width="200" height="200" id="resCanvas">
+              <%- tagcloud() %>
+            </canvas>
+          </div>
+        </div>
+      <% } %>
+</div>

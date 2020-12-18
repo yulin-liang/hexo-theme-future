@@ -27,16 +27,16 @@
     </div>
 </div> -->
 
-<div class="container self-profile-card p-0"> 
+<div class="container self-profile-card card-style p-0"> 
     <div class="row no-gutters" style=" padding:0 12px 0 12px;">
-        <div class="col-3 right-border no-gutters p-0" >
+        <div class="col-4 right-border no-gutters p-0" >
             <img src="<%= theme.avatar %>">
         </div>
 
-        <div class="col-9">
+        <div class="col-8">
             <div class="container my-4 no-gutters p-0">
                 <div class="intro">
-                    <h5 class="intro-author my-2"><%= theme.author %></h5>
+                    <h6 class="intro-author font-bold my-2"><%= theme.author %></h6>
                     <p class="intro-description my-2"><%= theme.description %></p>
                 </div>
                     
@@ -59,11 +59,8 @@
     </div>
 </div>
 
-
-<br/>
-<br/>
-<div class="container self-profile-card primary-color">
-    <div class="fix">
-        test
-    </div> 
+<% if (theme.enable_tag_cloud) { %> 
+<div class="container my-3 tag-cloud card-style text-center py-3">
+    <%- partial('tag_cloud.ejs') %> 
 </div>
+<% } %>
