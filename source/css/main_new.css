@@ -237,3 +237,18 @@ html, body {
     font-size: 12px;
     color: #717171; 
 }
+
+/* #################### index content #################### */
+footer {
+    margin-top: 10px;
+    border-top: #888 solid 1px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    font-size: 14px;
+    color: #717171;
+}
+
+footer a {
+    color: black;
+}
