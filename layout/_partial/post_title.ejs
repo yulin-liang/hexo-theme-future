@@ -1,8 +1,13 @@
 <div class="item">
     <div class="title">
         <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
-            <%= post.title %>
+            <span id="title-content"><%= post.title %></span>
         </a>
+        <% if (post.categories.length > 0) { %>
+            <% post.categories.each(function(category, index) { %> 
+                <a href="<%- config.root %><%- category.path %>"><span class="badge badge-primary"><%= category.name %></span></a>
+            <% }) %>
+        <% } %> 
         <div class="subtitle">
             <ul>
                 <li>发布 <time datetime="<%- date_xml(post.date) %>" itemprop="date"><%- date(post.date) %></time>

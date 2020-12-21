@@ -1,12 +1,5 @@
-<div class="index-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-8 justify-content-md-center">
-                <% page.posts.each(function(post, index) { %>           
-                    <%- partial('post_title.ejs',{post: post}) %>
-                <%  }) %>
-            </div>
-          </div>
-      </div>
-    </div>
+<div class="index-content card-style">
+    <% page.posts.each(function(post, index) { %>           
+        <%- partial('post_title.ejs',{post: post}) %>
+    <%  }) %>
 </div>
