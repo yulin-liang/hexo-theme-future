@@ -3,7 +3,7 @@
         <div class="cover">
 
             <!-- 引导栏 -->
-            <ul class="nav justify-content-end nav-btn">
+            <ul class="nav justify-content-end nav-btn fixed-top" id="navigation-bar">
                 <% for (var menu in theme.menus) { %>
                     <li class="nav-item">
                         <a href="<%- url_for(theme.menus[menu]) %> ">
@@ -25,6 +25,11 @@
                         <h2 class="intro-author"><%= theme.author %></h2>
                     </div>
                 
+                    <% if (theme.subtitle.length > 0) { %>
+                        <div>
+                            <span id="subtitle"></span>
+                        </div>
+                    <%} %> 
                 </div>
             </div>
 
@@ -44,11 +49,24 @@
     </div>
 </div>
 
+<script src= 
+    "https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js"> 
+</script> 
+
 <script>
     var leftBackgroundUrl = '<%- theme.leftBackground %>';
     var homeLeftAsideNode = document.getElementsByClassName('img-container')[0];
     if (homeLeftAsideNode) {
       homeLeftAsideNode.style.backgroundImage = 'url(' + leftBackgroundUrl + ')';
     }
+
+    var sub = '<%- theme.subtitle %>';
+    var typed = new Typed('#subtitle', {
+        strings: [sub],
+        startDelay: 300,
+        typeSpeed: 150,
+        loop: true,
+        backSpeed: 50,
+    });
 </script>
     

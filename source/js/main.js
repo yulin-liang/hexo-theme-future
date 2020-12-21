@@ -12,6 +12,8 @@ $(function() {
         else {
             $('#back-to-top').hide();
         }
+
+        $('#navigation-bar').toggleClass('scrolled', $(window).scrollTop() > 100)
     });
 });
 

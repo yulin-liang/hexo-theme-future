@@ -4,6 +4,7 @@ author: Yulin Liang(梁煜麟)
 description: Make coding more interesting
 avatar: https://i.loli.net/2020/12/09/liWow1fZmFVJEYO.jpg
 url: https://yulinliang.com
+subtitle: try to make life better
 
 menus: 
   主页: /
@@ -29,3 +30,9 @@ links:
 
 # 标签云
 enable_tag_cloud: true
+
+
+# 首页摘要展示
+auto_excerpt:
+  enable: true
+  length: 15
