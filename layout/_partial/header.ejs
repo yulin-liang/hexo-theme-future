@@ -7,7 +7,7 @@
                 <% for (var menu in theme.menus) { %>
                     <li class="nav-item">
                         <a href="<%- url_for(theme.menus[menu]) %> ">
-                            <img src="<%- theme.menu_icons[menu] %>"/>
+                            <img src="<%= config.root %>./<%- theme.menu_icons[menu] %>"/>
                             <span><%= menu %></span>
                         </a>
                     </li>
@@ -34,7 +34,7 @@
                     <% for (var link in theme.links) { %>
                         <li class="nav-item">
                             <a href="<%- url_for(theme.links[link]) %>">
-                                <img src="images/<%- link %>.svg"/>
+                                <img src="<%= config.root %>./images/<%- link %>.svg"/>
                             </a>
                         </li>
                     <% } %>

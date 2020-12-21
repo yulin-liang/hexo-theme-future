@@ -1,0 +1,36 @@
+<% if (page.total > 1) {%> 
+    <div class="d-flex w-100 justify-content-center my-4">
+    <ul class="pagination">
+    <% if (page.current == 1) { %>
+        <li class="page-item disabled">
+            <a class="page-link" href="<%= config.root %><%= page.prev_link %>"><<</a>
+        </li>
+    <% } else { %>
+        <li class="page-item">
+            <a class="page-link" href="<%= config.root %><%= page.prev_link %>"><<</a>
+        </li>
+    <% } %>  
+
+    <% for (var i = 1; i <= page.total; i++) { %>
+        <% var link = i == 1 ? config.root + "index.html" : config.root + "page/" + i + "/index.html" %> 
+        <% if (i == page.current) { %>
+            <li class="page-item disabled">
+                <a class="page-link" href="<%= link %>"><%= i %></a>
+            </li>
+        <% } else { %> 
+            <li class="page-item">
+                <a class="page-link" href="<%= link %>"><%= i %></a>
+            </li>
+        <% } %>  
+    <% } %> 
+
+    <% if (page.current == page.total) { %>
+        <li class="page-item disabled">
+            <a class="page-link" href="<%= config.root %><%= page.next_link %>">>></a>
+        </li>
+    <% } else { %>
+        <li class="page-item">
+            <a class="page-link" href="<%= config.root %><%= page.next_link %>">>></a>
+        </li>
+    <% } %> 
+<% } %> 
