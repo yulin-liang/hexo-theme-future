@@ -14,7 +14,7 @@
     <% for (var i = 1; i <= page.total; i++) { %>
         <% var link = i == 1 ? config.root + "index.html" : config.root + "page/" + i + "/index.html" %> 
         <% if (i == page.current) { %>
-            <li class="page-item disabled">
+            <li class="page-item active">
                 <a class="page-link" href="<%= link %>"><%= i %></a>
             </li>
         <% } else { %> 

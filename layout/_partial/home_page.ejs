@@ -7,6 +7,9 @@
         <div class="col-8">
             <%- partial('post_list.ejs', {page: page}) %> 
         </div>
+        <a id="back-to-top" class="btn btn-lg btn-box-shadow" href="#" role="button">
+            <img src="<%= config.root %>./images/back-to-top.svg">
+        </a>
     </div>
     <%- partial('footer.ejs') %> 
 </div>

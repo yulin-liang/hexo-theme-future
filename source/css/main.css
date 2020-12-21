@@ -249,3 +249,27 @@ footer {
 footer a {
     color: black;
 }
+
+#back-to-top {
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+    height: 2.6em;
+    width: 2.7em;
+    border-radius: 12px;
+    border: 1px solid var(--separator-color);
+    transition: 0.2 ease-out;
+    -webkit-transition: 0.2s ease-out;
+    bottom: 100px;
+    right: 10%;
+    display: none;
+}
+
+#back-to-top img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    filter: invert(33%) sepia(0%) saturate(0%) hue-rotate(203deg) brightness(95%) contrast(93%);
+}
