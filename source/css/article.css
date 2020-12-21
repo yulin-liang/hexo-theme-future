@@ -26,49 +26,38 @@
 }
 
 /* ---------------------- article content ------------------------ */
+.article-content blockquote {
+    padding: 15px 20px !important;
+    margin: 20px 0;
+    background-color: #F6F6F6;
+    border-left: 8px solid #78C0A8;
+    border-radius: 3px;
+    word-break: break-word; 
+    color: #555555;
+    background:#EDEDED;
+}
+
+blockquote p:first-child {
+    margin-top: 0; 
+}
+
+blockquote p:last-child {
+    margin-bottom: 0; 
+}
+
+blockquote span{
+  display:block;
+  color:#555555;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1.4em;
+} 
+
+/* ------------------------------------------------------------------ */
+
+
 .article-content {
     padding: 0 50px 20px 50px;
-    line-height: 1.8;
-    word-break: break-word;
-    font-size: 16px;
-}
-
-.article-content h1 {
-    font-size: 24px;
-}
-
-.article-content h2 {
-    border-bottom: 1px solid #eee;
-    font-size: 22px;
-}
-
-.article-content h3 {
-    font-size: 20px;
-}
-
-.article-content h4 {
-    font-size: 18px;
-}
-
-.article-content h5 {
-    font-size: 16px;
-}
-
-.article-content h6 {
-    font-size: 14px;
-}
-
-.article-content p {
-    margin: 22px 0;
-    color: #555;
-    font-size: 14px;
-    line-height: 1.6;
-    text-align: justify; 
-}
-
-.article-content p strong {
-      font-weight: bold;
-      color: #333333; 
 }
 
 .article-content img {
@@ -92,41 +81,22 @@
     color: #969696; 
 }
 
-.article-content blockquote {
-    padding: 15px 20px;
-    margin: 20px 0;
-    background-color: #F6F6F6;
-    border-left: 3px solid #49be38;
-    border-radius: 3px;
-    word-break: break-word; 
-}
-
-.article-content blockquote p:first-child {
-    margin-top: 0; 
-}
-
-.article-content blockquote p:last-child {
-    margin-bottom: 0; 
-}
-
 .article-content code {
-    padding: 2px 4px;
-    font-size: 13px;
-    color: #c7254e;
-    background-color: #f9f2f4;
+    padding: 3px 5px;
+    font-size: 0.85em;
+    background-color: var(--inline-code-bg);
+    color: var(--inline-code-font-color);
+    font-weight: 600;
     border-radius: 4px; 
 }
 
 .article-content a {
-    color: #49be38;
-    border-bottom: 1px solid #49be38; 
     text-decoration: none;
+    background: var(--link-background);
 }
 
 .article-content a:hover {
-    color: #c7254e;
-    border-bottom: 1px solid  #c7254e;
-    background: none; 
+    text-decoration: none;
 }
 
 .article-content ol, .article-content ul {
@@ -135,8 +105,6 @@
 }
 
 .article-content ol li, .article-content ul li {
-    font-size: 14px;
-    line-height: 1.6;
     color: #555;
     margin: 8px 0; 
 }

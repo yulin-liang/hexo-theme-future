@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="article-container">
+        <div class="article-title">
+            <h1><%= post.title %></h1>
+            <ul class="article-subtitle">
+                <li class="center article-subtitle-item">
+                    发布 <time datetime="<%- date_xml(post.date) %>" itemprop="date"><%- date(post.date) %></time>
+                </li>
+                <li class="center article-subtitle-item">
+                    更新 <time datetime="<%- date_xml(post.updated) %>" itemprop="dateUpdated"><%- date(post.updated) %>
+                    </li>
+            </ul>
+        </div>
+
+        <div class="article-content">
+            <%- post.content %>
+        </div>
+
+        <div class="article-comments" id="comments">
+            <%- partial('comments') %>
+        </div>
+
+        <% if (post.prev || post.next) { %>
+            <div class="article-navigation">
+                <% if (post.prev) { %>
+                    <a href="<%- url_for(post.prev.path) %>" id="article-nav-previous" class="article-nav-link">
+                        <i class="icon-circle-left"></i>
+                        <div class="article-nav-title">
+                            <%= post.prev.title %>
+                        </div>
+                    </a>
+                <% } %>
+                <% if(post.next) { %>
+                    <a href="<%- url_for(post.next.path) %>" id="article-nav-next" class="article-nav-link-wrap">
+                        <div class="article-nav-title"><%= post.next.title %></div>
+                        <div class="icon-circle-right"></div>
+                    </a>
+                <% } %>   
+            </div>
+        <% } %> 
+    </div>
+    <div class="footer">
+        <p>
+            <a href="https://hexo.io"> Hexo </a> 强力驱动 |
+            <a href="https://github.com/yulin-liang/hexo-theme-future"> future </a>
+            主题
+        </p>
+    </div>
+</div>

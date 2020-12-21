@@ -6,7 +6,35 @@ html, body {
     width: 100%;
     font-family: 'Source Sans Pro', sans-serif;
     min-height: 100%;
+    line-height: 1.5;
+    word-break: break-word;
+    font-size: 16px;
 }
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+p, span, h5, h6 {
+    font-size: 16px;
+}
+
 
 .parent-size {
     position: absolute;
