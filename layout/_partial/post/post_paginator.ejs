@@ -1,0 +1,19 @@
+<%- console.log(post) %> 
+<% if (post.prev || post.next) { %>
+    <div class="article-navigation">
+        <% if (post.prev) { %>
+            <a href="<%- url_for(post.prev.path) %>" id="article-nav-previous" class="article-nav-link">
+                <!-- <i class="icon-circle-left"></i> -->
+                <span class="article-nav-title">
+                    <%= post.prev.title %>
+                </span>
+            </a>
+        <% } %>
+        <% if(post.next) { %>
+            <a href="<%- url_for(post.next.path) %>" id="article-nav-next" class="article-nav-link-wrap">
+                <span class="article-nav-title"><%= post.next.title %></span>
+                <!-- <div class="icon-circle-right"></div> -->
+            </a>
+        <% } %>   
+    </div>
+<% } %> 

@@ -1,0 +1,114 @@
+@import "theme.css";
+
+/* #################### 上一页按钮 #################### */
+#article-nav-previous, #article-nav-previous:hover, #article-nav-previous:link {
+    text-decoration: none;
+    color: black;
+}
+
+#article-nav-previous {
+    float: left;
+    position: relative;
+    transition: all .35s;
+    padding: 15px 30px;
+    font-weight: bold;  
+}
+
+#article-nav-previous::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    z-index: -1;
+    background: #ff5964;
+    transition: all .35s;
+}
+
+ #article-nav-previous span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.35s;
+    font-size: 16px;
+}
+
+ #article-nav-previous span::before {
+    content: '\00ab';
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: -20px;
+    transition: 0.35s;
+  }
+
+ #article-nav-previous:hover span {
+    padding-left: 25px;
+  }
+
+  #article-nav-previous:hover span::before {
+      opacity: 1;
+      left: 0;
+  }
+
+#article-nav-previous:hover::after {
+    width: 100%;
+}
+
+/* #################### 下一页按钮 #################### */
+#article-nav-next, #article-nav-next:hover, #article-nav-next:link {
+    text-decoration: none;
+    color: black;
+}
+
+#article-nav-next {
+    float: right;
+    position: relative;
+    transition: all .35s;
+    padding: 15px 30px;
+    font-weight: bold;  
+}
+
+#article-nav-next::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    z-index: -1;
+    background: #ff5964;
+    transition: all .35s;
+}
+
+#article-nav-next:hover::before {
+    width: 100%;
+}
+
+#article-nav-next span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.35s;
+    font-size: 16px;
+}
+
+#article-nav-next:hover span {
+    padding-right: 25px;
+}
+
+#article-nav-next span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    right: -20px;
+    transition: 0.35s;
+}
+
+#article-nav-next:hover span::after {
+    opacity: 1;
+    right: 0;
+}
+

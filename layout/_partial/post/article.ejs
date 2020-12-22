@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="article-container">
+        <div class="article-title">
+            <h1><%= post.title %></h1>
+            <ul class="article-subtitle">
+                <li class="center article-subtitle-item">
+                    发布 <time datetime="<%- date_xml(post.date) %>" itemprop="date"><%- date(post.date) %></time>
+                </li>
+                <li class="center article-subtitle-item">
+                    更新 <time datetime="<%- date_xml(post.updated) %>" itemprop="dateUpdated"><%- date(post.updated) %>
+                    </li>
+            </ul>
+        </div>
+
+        <div class="article-content">
+            <%- post.content %>
+        </div>
+
+        <div class="article-comments" id="comments">
+            <%- partial('comments.ejs') %>
+        </div>
+
+        <%- partial('post_paginator.ejs', {post: post}) %> 
+    </div>
+</div>

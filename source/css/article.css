@@ -150,48 +150,6 @@ blockquote span{
 /**********分页************/
 .article-navigation {
     border-top: 1px solid #E6E6E6;
-    padding-top: 20px;
-    padding-bottom: 20px;
     margin-bottom: 20px;
-}
-
-.article-navigation a {
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-}
-
-.article-navigation #article-nav-previous {
-    float: left;
-}
-
-.article-navigation #article-nav-previous .icon-circle-left{
-    display: inline-block;
-    border-top: 2px solid;
-    border-right: 2px solid;
-    width: 5px;
-    height: 5px;
-    border-color: black;
-    transform: rotate(-135deg);
-    margin-right: 10px;
-}
-
-.article-nav-title {
-    display: inline-block;
-    margin-top: 5px;
-}
-
-.article-navigation #article-nav-next {
-    float: right;
-}
-
-.article-navigation #article-nav-next .icon-circle-right{
-    display: inline-block;
-    border-top: 2px solid;
-    border-right: 2px solid;
-    width: 5px;
-    height: 5px;
-    border-color: black;
-    transform: rotate(45deg);
-    margin-left: 10px;
+    padding-bottom: 80px;
 }

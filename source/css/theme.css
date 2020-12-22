@@ -1,5 +1,6 @@
 /* #################### variables ############### */
 :root {
+    --footer-bg:  rgba(208, 208, 208, 0.35);
     --separator-color: rgba(208, 208, 208, 0.35);
     --separator-style: rgba(208, 208, 208, 0.35) solid 1px;
     --background-color: #C4DCF1;

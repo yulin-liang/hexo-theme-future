@@ -84,6 +84,10 @@ p, span, h5, h6 {
     box-shadow: 2px 2px var(--separator-color);
 }
 
+.clear-float {
+    clear: both;
+}
+
 
 /* #################### 首页头部 #################### */
 
@@ -271,17 +275,17 @@ p, span, h5, h6 {
 
 /* #################### index content #################### */
 footer {
-    margin-top: 10px;
-    border-top:  var(--separator-style);
-    padding-top: 20px;
-    padding-bottom: 40px;
-
+    height: 100px;
     font-size: 14px;
     color: #717171;
 }
 
 footer a {
     color: black;
+}
+
+.footer-bg {
+    background-color: var(--footer-bg);
 }
 
 #back-to-top {
