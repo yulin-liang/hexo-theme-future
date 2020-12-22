@@ -35,4 +35,4 @@ enable_tag_cloud: true
 # 首页摘要展示
 auto_excerpt:
   enable: true
-  length: 15
+  length: 150

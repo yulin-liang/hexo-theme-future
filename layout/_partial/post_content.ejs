@@ -1,22 +1,54 @@
-<div class="item">
-    <div class="title">
-        <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
-            <span id="title-content"><%= post.title %></span>
+<% if (post.thumbnail) { %>
+<!-- 带自定义图片的layout -->
+<% var class_type = index % 2 == 0 ? "blog-card post-card" : "post-card blog-card alt" %> 
+<div class="<%- class_type %>">
+    <div class="meta">
+      <div class="photo" style="background-image: url('<%- post.thumbnail %>')"></div>
+    </div>
+    <div class="description">
+      <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
+        <span id="title-content"><%= post.title %></span>
+      </a>
+      <div id="excerpt">
+        <%- truncate(strip_html(post.content), {length: 200}) %>
+      </div>
+      <div>
+        <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next">
+          <span class="article-nav-title">Read More</span>
         </a>
-        <% if (post.categories.length > 0) { %>
-            <% post.categories.each(function(category, index) { %> 
-                <a href="<%- config.root %><%- category.path %>"><span class="badge badge-primary"><%= category.name %></span></a>
-            <% }) %>
-        <% } %> 
-        <div class="subtitle">
-            <ul>
-                <li>发布 <time datetime="<%- date_xml(post.date) %>" itemprop="date"><%- date(post.date) %></time>
-                </li>
-                <li>更新 <time datetime="<%- date_xml(post.updated) %>" itemprop="dateUpdated"><%- date(post.updated) %></time>
-                </li>
-            </ul>
+      </div>
+    </div>
+  </div>
+<% } else { %>
+    <!-- 不带自定义图片的layout -->
+    <div class="post-card plain-text-card">
+        <div class="title">
+            <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
+                <span id="title-content"><%= post.title %></span>
+            </a>
+            <% if (post.categories.length > 0) { %>
+                <% post.categories.each(function(category, index) { %> 
+                    <a href="<%- config.root %><%- category.path %>"><span class="badge badge-primary"><%= category.name %></span></a>
+                <% }) %>
+            <% } %> 
+            <div class="subtitle">
+                <ul>
+                    <li>发布 <time datetime="<%- date_xml(post.date) %>" itemprop="date"><%- date(post.date) %></time>
+                    </li>
+                    <li>更新 <time datetime="<%- date_xml(post.updated) %>" itemprop="dateUpdated"><%- date(post.updated) %></time>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <%# var plaintext = post.content.replace(/(<([^>]+)>)/ig,'') %>  
+        <div id="excerpt">
+          <%- truncate(strip_html(post.content), {length: theme.auto_excerpt.length}) %>
+        </div>
+
+        <div>
+          <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next">
+            <span class="article-nav-title">Read More</span>
+          </a>
         </div>
     </div>
-    <%# var plaintext = post.content.replace(/(<([^>]+)>)/ig,'') %>
-           
-</div>
+<% } %> 

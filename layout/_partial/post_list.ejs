@@ -1,6 +1,6 @@
-<div class="index-content card-style">
-    <% page.posts.each(function(post, index) { %>           
-        <%- partial('post_content.ejs',{post: post}) %>
+<div class="index-content">
+    <% page.posts.each(function(post, index) { %>       
+        <%- partial('post_content.ejs',{post: post, index: index}) %>
     <%  }) %>
 </div>
 

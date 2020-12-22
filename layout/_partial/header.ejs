@@ -5,7 +5,7 @@
             <!-- 引导栏 -->
             <ul class="nav justify-content-end nav-btn fixed-top" id="navigation-bar">
                 <% for (var menu in theme.menus) { %>
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a href="<%- url_for(theme.menus[menu]) %> ">
                             <img src="<%= config.root %>./<%- theme.menu_icons[menu] %>"/>
                             <span><%= menu %></span>

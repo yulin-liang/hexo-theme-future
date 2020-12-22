@@ -11,6 +11,10 @@ html, body {
     font-size: 16px;
 }
 
+* {
+    box-shadow: border-box;
+}
+
 h1 {
     font-size: 24px;
 }
@@ -226,6 +230,17 @@ p, span, h5, h6 {
 }
 
 /* #################### index content #################### */
+.index-content {
+    line-height: 3;
+}
+.index-content:first-child {
+    margin-top: 0;
+}
+
+.index-content a, .index-content a:hover {
+    text-decoration: none;
+}
+
 .index-content .item {
     /* background-color: blue; */
     position: relative;
@@ -241,19 +256,26 @@ p, span, h5, h6 {
     border-bottom: none;
 }
 
-.index-content .item a {
-    color: #555555;
-    font-size: 18px;
+#title-content {
+    display: inline-block;
+    font-size: 22px;
     font-weight: bold;
     line-height: 1.5; 
-    text-decoration: none;
+    color: var(--category-color);
 }
 
-.index-content .item a:hover #title-content {
+a:hover #title-content {
     color: #21D4FD;
-    background: linear-gradient(30deg, #0c7bb3, #f2bae8);
+    background: var(--hover-linear-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#excerpt {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--lighter-font-color);
+    font-weight: 550;
 }
 
 .subtitle {
@@ -271,6 +293,20 @@ p, span, h5, h6 {
     margin: 10px 8px 8px 0px;
     font-size: 12px;
     color: #717171; 
+}
+
+.post-card {
+    margin: 1rem;
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    line-height: 1.4;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.plain-text-card {
+    padding: 1rem;
 }
 
 /* #################### index content #################### */
