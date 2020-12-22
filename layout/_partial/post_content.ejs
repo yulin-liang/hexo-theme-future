@@ -12,6 +12,41 @@
       <div id="excerpt">
         <%- truncate(strip_html(post.content), {length: 200}) %>
       </div>
+      
+      <div id="post-info">
+        <span>
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <span><%= post.date.format(config.date_format) %></span>
+        </span>
+        
+        <% if (post.categories.length > 0) { %>
+          <span> | </span>
+          <span>
+            <i class="fa fa-inbox" aria-hidden="true"></i>
+            <%- list_categories(post.categories, {
+              show_count: false,
+              class: 'article-category',
+              style: 'none',
+              separator: ','
+            }) %>
+          </span>
+        <% } %> 
+
+        <% if (post.tags.length > 0) { %>
+          <span> | </span>
+          <span>
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <%- list_tags(post.tags, {
+              show_count: false,
+              class: 'article-tag',
+              style: 'none',
+              separator: ','
+            }) %>
+          </span>
+        <% } %> 
+        
+      </div>
+
       <div>
         <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next">
           <span class="article-nav-title">Read More</span>
@@ -31,20 +66,45 @@
                     <a href="<%- config.root %><%- category.path %>"><span class="badge badge-primary"><%= category.name %></span></a>
                 <% }) %>
             <% } %> 
-            <div class="subtitle">
-                <ul>
-                    <li>发布 <time datetime="<%- date_xml(post.date) %>" itemprop="date"><%- date(post.date) %></time>
-                    </li>
-                    <li>更新 <time datetime="<%- date_xml(post.updated) %>" itemprop="dateUpdated"><%- date(post.updated) %></time>
-                    </li>
-                </ul>
-            </div>
         </div>
-        <%# var plaintext = post.content.replace(/(<([^>]+)>)/ig,'') %>  
+  
         <div id="excerpt">
           <%- truncate(strip_html(post.content), {length: theme.auto_excerpt.length}) %>
         </div>
 
+        <div id="post-info">
+          <span>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <span><%= post.date.format(config.date_format) %></span>
+          </span>
+          
+          <% if (post.categories.length > 0) { %>
+            <span> | </span>
+            <i class="fa fa-inbox" aria-hidden="true"></i>
+            <span>
+              <%- list_categories(post.categories, {
+                show_count: false,
+                class: 'article-category',
+                style: 'none',
+                separator: ','
+              }) %>
+            </span>
+          <% } %> 
+
+          <% if (post.tags.length > 0) { %>
+            <span> | </span>
+            <span>
+              <i class="fa fa-tags" aria-hidden="true"></i>
+              <%- list_tags(post.tags, {
+                show_count: false,
+                class: 'article-tag',
+                style: 'none',
+                separator: ','
+              }) %>
+            </span>
+          <% } %> 
+          
+        </div>
         <div>
           <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next">
             <span class="article-nav-title">Read More</span>

@@ -233,9 +233,6 @@ p, span, h5, h6 {
 .index-content {
     line-height: 3;
 }
-.index-content:first-child {
-    margin-top: 0;
-}
 
 .index-content a, .index-content a:hover {
     text-decoration: none;
@@ -257,6 +254,7 @@ p, span, h5, h6 {
 }
 
 #title-content {
+    margin-top: 0.5rem;
     display: inline-block;
     font-size: 22px;
     font-weight: bold;
@@ -276,27 +274,11 @@ a:hover #title-content {
     line-height: 1.5;
     color: var(--lighter-font-color);
     font-weight: 550;
-}
-
-.subtitle {
-    overflow: auto;
-    padding: 0;
- }
-
-.subtitle ul {
-    padding: 1px;
-}
-
-.subtitle li {
-    float: left;
-    list-style: none;
-    margin: 10px 8px 8px 0px;
-    font-size: 12px;
-    color: #717171; 
+    margin-top: 1rem;
 }
 
 .post-card {
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
     background: #fff;
     line-height: 1.4;
@@ -309,6 +291,99 @@ a:hover #title-content {
     padding: 1rem;
 }
 
+#post-info {
+    font-size: 12px;
+    margin-top: 20px;
+    font-weight: 550;
+    float: left;
+    display: inline-block;
+}
+
+#post-info span, #post-info i {
+    font-size: 12px;
+}
+
+#post-info a {
+    color: black;
+}
+
+/*************** 带有图片样式 *******************/
+.blog-card {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+
+  .blog-card .meta {
+    position: relative;
+    z-index: 0;
+    height: 200px;
+  }
+  .blog-card .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+
+  .blog-card .description {
+    padding: 0 1rem 1rem 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  
+  @media (min-width: 640px) {
+    .blog-card {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      max-width: 700px;
+    }
+    .blog-card .meta {
+      flex-basis: 40%;
+      height: auto;
+    }
+    .blog-card .description {
+      flex-basis: 60%;
+    }
+    .blog-card .description:before {
+      -webkit-transform: skewX(-3deg);
+              transform: skewX(-3deg);
+      content: "";
+      background: #fff;
+      width: 30px;
+      position: absolute;
+      left: -10px;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .blog-card.alt {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+              flex-direction: row-reverse;
+    }
+    .blog-card.alt .description:before {
+      left: inherit;
+      right: -10px;
+      -webkit-transform: skew(3deg);
+              transform: skew(3deg);
+    }
+    .blog-card.alt .details {
+      padding-left: 25px;
+    }
+  }
+  
 /* #################### index content #################### */
 footer {
     height: 100px;
