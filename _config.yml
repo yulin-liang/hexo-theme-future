@@ -39,8 +39,8 @@ auto_excerpt:
 
 # gitalk
 enable_gitalk: false
-gitalk_clientID: 1a3479a83d404aec2a91
-gitalk_clientSecret: d9395010fd3f5c98b0afa1ec0cc3c2d386978888
+gitalk_clientID: xxx
+gitalk_clientSecret: xxx
 gitalk_repo: yulin-liang.github.io
 gitalk_owner: yulin-liang
 gitalk_admin: yulin-liang
