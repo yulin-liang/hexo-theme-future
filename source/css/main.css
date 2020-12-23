@@ -105,6 +105,14 @@ p, span, h5, h6 {
     background: white;
 }
 
+.post-ingredient-bg {
+    background-image: linear-gradient(-225deg, #FFFEFF 30%, #dfe9f3 100%) !important;
+}
+
+.post-ingredient-bg.alt {
+    background-image: linear-gradient(-225deg, #dfe9f3 00%, #FFFEFF 70%) !important;
+}
+
 
 /* #################### 首页头部 #################### */
 
@@ -211,6 +219,7 @@ p, span, h5, h6 {
     .social-media a:hover img {
         color: white;
     }
+    
 
 /* #################### 首页正文 #################### */
 .profile-card .profile-icon img{
@@ -359,7 +368,7 @@ a:hover #title-content {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
               flex-direction: row;
-      max-width: 700px;
+      max-width: 800px;
     }
     .blog-card .meta {
       flex-basis: 40%;
@@ -369,8 +378,8 @@ a:hover #title-content {
       flex-basis: 60%;
     }
     .blog-card .description:before {
-      -webkit-transform: skewX(-3deg);
-              transform: skewX(-3deg);
+      -webkit-transform: skewX(-4deg);
+              transform: skewX(-4deg);
       content: "";
       background: #fff;
       width: 30px;
@@ -388,8 +397,8 @@ a:hover #title-content {
     .blog-card.alt .description:before {
       left: inherit;
       right: -10px;
-      -webkit-transform: skew(3deg);
-              transform: skew(3deg);
+      -webkit-transform: skew(4deg);
+              transform: skew(4deg);
     }
     .blog-card.alt .details {
       padding-left: 25px;

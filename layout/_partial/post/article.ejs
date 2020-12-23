@@ -16,9 +16,11 @@
             <%- post.content %>
         </div>
 
-        <div class="article-comments" id="comments">
-            <%- partial('comments.ejs') %>
-        </div>
+        <% if (theme.enable_gitalk) { %>
+            <div class="article-comments" id="comments">
+                <%- partial('comments.ejs') %>
+            </div>
+        <% } %> 
 
         <%- partial('post_paginator.ejs', {post: post}) %> 
     </div>

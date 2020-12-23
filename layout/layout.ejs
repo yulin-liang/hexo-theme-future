@@ -20,8 +20,7 @@
     <div id="main">
         <!-- 引入侧边栏-->
 
-        <div id="content" class="container-fluid">
-            text
+        <div id="content">
             <%- body %>
         </div>
 
@@ -34,35 +33,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <%- js('lib/prism/prism.js') %> 
     <%- js('js/main.js') %>  
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.2.1/trianglify.min.js"></script>
-    <script>
-        const pageFirstChild = document.querySelector('.navbar-header');
-        var pattern = Trianglify({
-            width: window.innerWidth,
-            height: 230
-        });
-
-        function deletePatternPlaceholder() {
-            const patternPlaceholder = document.getElementById('pattern-placeholder');
-            const parent = patternPlaceholder.parentElement;
-            parent.removeChild(patternPlaceholder);
-        }
-        if (pageFirstChild) {
-            document.body.insertBefore(pattern.canvas(), pageFirstChild);
-            deletePatternPlaceholder();
-            toggleHeaderNavBar();
-        }
-        function toggleHeaderNavBar() {
-            document.addEventListener('scroll', function() {
-                const offset = window.pageYOffset;
-                if (offset > 128) {
-                pageFirstChild.classList.add('fixed-header');
-                }
-                if (offset <= 128) {
-                pageFirstChild.classList.remove('fixed-header');
-                }
-            });
-        }
-    </script> -->
 </body>
 </html>

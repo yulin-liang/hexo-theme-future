@@ -1,11 +1,13 @@
 <% if (post.thumbnail) { %>
 <!-- 带自定义图片的layout -->
-<% var class_type = index % 2 == 0 ? "blog-card post-card" : "post-card blog-card alt" %> 
+<% var class_type = index % 2 == 0 ? "blog-card post-card" : "post-card blog-card alt post-ingredient-bg" %> 
 <div class="<%- class_type %>">
     <div class="meta">
       <div class="photo" style="background-image: url('<%- post.thumbnail %>')"></div>
     </div>
-    <div class="description">
+
+    <% var description_type = index % 2 == 0 ? "description post-ingredient-bg" : "description post-ingredient-bg alt" %> 
+    <div class="<%- description_type %>">
       <div>
       <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
         <span id="title-content"><%= post.title %></span>
@@ -27,7 +29,8 @@
   </div>
 <% } else { %>
     <!-- 不带自定义图片的layout -->
-    <div class="post-card plain-text-card">
+    <% var class_type = index % 2 == 0 ? "post-card plain-text-card post-ingredient-bg" : "post-card plain-text-card post-ingredient-bg" %> 
+    <div class="<%- class_type %>">
         <div class="title">
             <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
                 <span id="title-content"><%= post.title %></span>
