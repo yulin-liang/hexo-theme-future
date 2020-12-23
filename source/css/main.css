@@ -242,8 +242,8 @@ p, span, h5, h6 {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
-    border-bottom-left-radius: 12px;
-    border-top-left-radius: 12px;
+    border-bottom-left-radius:5px;
+    border-top-left-radius: 5px;
 }
 
 .self-profile-card .intro {
