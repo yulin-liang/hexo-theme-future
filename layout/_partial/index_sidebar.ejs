@@ -59,7 +59,7 @@
     </div>
 </div>
 
-<% if (theme.enable_tag_cloud) { %> 
+<% if (theme.enable_tag_cloud && site.tags.length > 3) { %> 
 <div class="container my-3 tag-cloud post-card text-center py-3">
     <%- partial('tag_cloud.ejs') %> 
 </div>
