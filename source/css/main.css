@@ -113,11 +113,19 @@ p, span, h5, h6 {
     background-image: linear-gradient(-225deg, #dfe9f3 00%, #FFFEFF 70%) !important;
 }
 
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
 
 /* #################### 首页头部 #################### */
 
 .header-margin {
     margin-top: 100px;
+}
+
+.post-header-margin {
+    margin-top: 200px;
 }
 
 /**header background*/
@@ -307,23 +315,23 @@ a:hover #title-content {
     padding: 1rem;
 }
 
-#post-info {
+.post-info {
     font-size: 12px;
     margin-top: 5px;
     font-weight: 550;
 }
 
-#post-info span, #post-info i {
+.post-info span, .post-info i {
     font-size: 12px;
     color: var(--post-info-color);
 }
 
-#post-info a {
+.post-info a {
     color: var(--post-info-color);
 }
 
-#post-info .separator {
-    color: #666;
+.post-info .separator {
+    color: #ddd;
     margin-left: 5px;
     margin-right: 5px;
 }

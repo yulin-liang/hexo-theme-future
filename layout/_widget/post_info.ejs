@@ -1,4 +1,5 @@
-<div id="post-info">
+<% var class_type = is_home() ? "post-info" : "article-info text-center" %> 
+<div class="<%= class_type %>">
     <!-- 发表日期 -->
     <span>
       <i class="fa fa-calendar" aria-hidden="true"></i>

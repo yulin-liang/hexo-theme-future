@@ -1,0 +1,35 @@
+<div class="jumbotron jumbotron-fluid header p-0">
+    <div class="article-header-img">
+        <div class="cover">
+
+            <!-- 引导栏 -->
+            <ul class="nav justify-content-end nav-btn fixed-top" id="navigation-bar">
+                <% for (var menu in theme.menus) { %>
+                    <li class="nav-item ">
+                        <a href="<%- url_for(theme.menus[menu]) %> ">
+                            <img src="<%= config.root %>./<%- theme.menu_icons[menu] %>"/>
+                            <span><%= menu %></span>
+                        </a>
+                    </li>
+                <% } %> 
+            </ul>
+
+            <!-- 文章标题 -->
+            <div class="article-title">
+                <h1><%= post.title %></h1> 
+            </div>
+
+            <%- partial('../../_widget/post_info.ejs', {post: post}) %> 
+     
+        </div>
+    </div>
+</div>
+
+<script>
+    var leftBackgroundUrl = '<%- theme.leftBackground %>';
+    var homeLeftAsideNode = document.getElementsByClassName('article-header-img')[0];
+    if (homeLeftAsideNode) {
+      homeLeftAsideNode.style.backgroundImage = 'url(' + leftBackgroundUrl + ')';
+    }
+</script>
+    

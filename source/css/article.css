@@ -8,12 +8,11 @@
 
 .article-title {
     text-align: center;
-    padding: 80px 50px 50px 50px;
-    background: green;
+    padding: 100px 50px 20px 50px;
 }
 
 .article-title h1 {
-    color: #4d4d4d;
+    color: #fff;
     font-size: 40px;
 }
 
@@ -24,6 +23,44 @@
 .article-subtitle-item {
     margin: 10px;
 }
+
+.article-info {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 550;
+}
+
+.article-info span, .article-info i {
+    font-size: 14px;
+    color: white
+}
+
+.article-info a {
+    color: white;
+}
+
+.article-info .separator {
+    color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* ############################# header ########################## */
+.article-header-img {
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    .article-header-img .cover {
+        background: rgba(0, 0, 0, 0.35);
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        color: white;
+    }
 
 /* ---------------------- article content ------------------------ */
 .article-content blockquote {
