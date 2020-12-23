@@ -260,6 +260,7 @@ p, span, h5, h6 {
     font-weight: bold;
     line-height: 1.5; 
     color: var(--category-color);
+    position: relative;
 }
 
 a:hover #title-content {
@@ -293,10 +294,8 @@ a:hover #title-content {
 
 #post-info {
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: 5px;
     font-weight: 550;
-    float: left;
-    display: inline-block;
 }
 
 #post-info span, #post-info i {

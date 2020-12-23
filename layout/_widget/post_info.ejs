@@ -1,0 +1,35 @@
+<div id="post-info">
+    <!-- 发表日期 -->
+    <span>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <span><%= post.date.format(config.date_format) %></span>
+    </span>
+    
+    <!-- categories -->
+    <% if (post.categories.length > 0) { %>
+      <span> | </span>
+      <i class="fa fa-inbox" aria-hidden="true"></i>
+      <span>
+        <%- list_categories(post.categories, {
+          show_count: false,
+          class: 'article-category',
+          style: 'none',
+          separator: ','
+        }) %>
+      </span>
+    <% } %> 
+
+    <!-- tags -->
+    <% if (post.tags.length > 0) { %>
+      <span> | </span>
+      <span>
+        <i class="fa fa-tags" aria-hidden="true"></i>
+        <%- list_tags(post.tags, {
+          show_count: false,
+          class: 'article-tag',
+          style: 'none',
+          separator: ','
+        }) %>
+      </span>
+    <% } %> 
+</div>

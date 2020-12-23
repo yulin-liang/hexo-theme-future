@@ -6,49 +6,20 @@
       <div class="photo" style="background-image: url('<%- post.thumbnail %>')"></div>
     </div>
     <div class="description">
+      <div>
       <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
         <span id="title-content"><%= post.title %></span>
       </a>
+      </div>
+
+      <%- partial('_widget/post_info.ejs') %> 
+
       <div id="excerpt">
         <%- truncate(strip_html(post.content), {length: 200}) %>
       </div>
-      
-      <div id="post-info">
-        <span>
-          <i class="fa fa-calendar" aria-hidden="true"></i>
-          <span><%= post.date.format(config.date_format) %></span>
-        </span>
-        
-        <% if (post.categories.length > 0) { %>
-          <span> | </span>
-          <span>
-            <i class="fa fa-inbox" aria-hidden="true"></i>
-            <%- list_categories(post.categories, {
-              show_count: false,
-              class: 'article-category',
-              style: 'none',
-              separator: ','
-            }) %>
-          </span>
-        <% } %> 
-
-        <% if (post.tags.length > 0) { %>
-          <span> | </span>
-          <span>
-            <i class="fa fa-tags" aria-hidden="true"></i>
-            <%- list_tags(post.tags, {
-              show_count: false,
-              class: 'article-tag',
-              style: 'none',
-              separator: ','
-            }) %>
-          </span>
-        <% } %> 
-        
-      </div>
 
       <div>
-        <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next">
+        <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next" class="read-more">
           <span class="article-nav-title">Read More</span>
         </a>
       </div>
@@ -67,46 +38,15 @@
                 <% }) %>
             <% } %> 
         </div>
+
+        <%- partial('_widget/post_info.ejs') %> 
   
         <div id="excerpt">
           <%- truncate(strip_html(post.content), {length: theme.auto_excerpt.length}) %>
         </div>
 
-        <div id="post-info">
-          <span>
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            <span><%= post.date.format(config.date_format) %></span>
-          </span>
-          
-          <% if (post.categories.length > 0) { %>
-            <span> | </span>
-            <i class="fa fa-inbox" aria-hidden="true"></i>
-            <span>
-              <%- list_categories(post.categories, {
-                show_count: false,
-                class: 'article-category',
-                style: 'none',
-                separator: ','
-              }) %>
-            </span>
-          <% } %> 
-
-          <% if (post.tags.length > 0) { %>
-            <span> | </span>
-            <span>
-              <i class="fa fa-tags" aria-hidden="true"></i>
-              <%- list_tags(post.tags, {
-                show_count: false,
-                class: 'article-tag',
-                style: 'none',
-                separator: ','
-              }) %>
-            </span>
-          <% } %> 
-          
-        </div>
         <div>
-          <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next">
+          <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next" class="read-more">
             <span class="article-nav-title">Read More</span>
           </a>
         </div>
