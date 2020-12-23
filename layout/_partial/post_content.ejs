@@ -12,7 +12,7 @@
       </a>
       </div>
 
-      <%- partial('_widget/post_info.ejs') %> 
+      <%- partial('_widget/post_info.ejs', {post: post}) %> 
 
       <div id="excerpt">
         <%- truncate(strip_html(post.content), {length: 200}) %>
@@ -39,7 +39,7 @@
             <% } %> 
         </div>
 
-        <%- partial('_widget/post_info.ejs') %> 
+        <%- partial('_widget/post_info.ejs', {post: post}) %> 
   
         <div id="excerpt">
           <%- truncate(strip_html(post.content), {length: theme.auto_excerpt.length}) %>
@@ -47,7 +47,7 @@
 
         <div>
           <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %>" id="article-nav-next" class="read-more">
-            <span class="article-nav-title">Read More</span>
+            <span>Read More</span>
           </a>
         </div>
     </div>

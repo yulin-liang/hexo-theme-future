@@ -4,11 +4,13 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
     min-height: 100%;
     line-height: 1.5;
     word-break: break-word;
     font-size: 16px;
+    color: #333333;
+    font-weight: 500;
 }
 
 * {
@@ -272,10 +274,11 @@ a:hover #title-content {
 
 #excerpt {
     font-size: 14px;
-    line-height: 1.5;
-    color: var(--lighter-font-color);
-    font-weight: 550;
-    margin-top: 1rem;
+    line-height: 2;
+    color: var(--font-color);
+    font-weight: 500;
+    margin-top: 10px;
+    word-spacing: 1px;
 }
 
 .post-card {
@@ -300,10 +303,17 @@ a:hover #title-content {
 
 #post-info span, #post-info i {
     font-size: 12px;
+    color: var(--post-info-color);
 }
 
 #post-info a {
-    color: black;
+    color: var(--post-info-color);
+}
+
+#post-info .separator {
+    color: #666;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /*************** 带有图片样式 *******************/
