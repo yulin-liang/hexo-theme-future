@@ -32,11 +32,13 @@
     position: relative;
     transition: 0.35s;
     font-size: 16px;
+    z-index: 1;
 }
 
  #article-nav-previous span::before {
     content: '\00ab';
     position: absolute;
+    z-index: 1;
     opacity: 1;
     top: 0;
     left: -20px;
