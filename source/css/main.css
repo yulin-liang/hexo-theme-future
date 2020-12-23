@@ -279,7 +279,7 @@ a:hover #title-content {
 
 .post-card {
     margin: 0 1rem 1rem 1rem;
-    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.2);
     background: #fff;
     line-height: 1.4;
     border-radius: 5px;
@@ -291,7 +291,7 @@ a:hover #title-content {
 
 .post-card:hover {
     transform: translate(0, -5x);
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 .plain-text-card {
