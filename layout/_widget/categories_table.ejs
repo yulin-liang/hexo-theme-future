@@ -1,0 +1,27 @@
+<!-- 接受categories变量 -->
+<% if (site.categories.length > 0) { %>
+    <div class="categories_table white-bg">
+        <div class="container categories-container">
+            <p class="font-bold text-center">Categories</p>
+
+            <% site.categories.map(function(category) { %>
+                <div class="category-item">
+                    <a href="<%- category.path %> "><%= category.name %></a> 
+                    <div class="d-flex justify-content-between">
+                        <div class="progress-bar align-self-end">
+                            <% var percentage = category.length / site.posts.length * 100 + "%"; %>
+                            <div id="<%- category.name %>" class="progress">
+                            </div>
+                            <script>
+                                document.getElementById('<%- category.name %>').style.width = '<%- percentage %>';
+                            </script>
+                        </div>
+                        <div class="align-self-end">
+                            <span class="category-progress-content"><%= category.length %> / <%= site.posts.length %> </span>
+                        </div>
+                    </div>
+                </div>
+            <% }) %> 
+        </div>
+    </div>
+<% } %> 

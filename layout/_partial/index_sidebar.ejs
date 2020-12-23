@@ -27,7 +27,7 @@
     </div>
 </div> -->
 
-<div class="container self-profile-card card-style p-0"> 
+<div class="container self-profile-card post-card p-0"> 
     <div class="row no-gutters" >
         <div class="col-4 right-border no-gutters p-0" >
             <img src="<%= theme.avatar %>">
@@ -60,7 +60,11 @@
 </div>
 
 <% if (theme.enable_tag_cloud) { %> 
-<div class="container my-3 tag-cloud card-style text-center py-3">
+<div class="container my-3 tag-cloud post-card text-center py-3">
     <%- partial('tag_cloud.ejs') %> 
 </div>
 <% } %>
+
+<div class="post-card clear-margin">
+    <%- partial('../_widget/categories_table.ejs') %> 
+</div>

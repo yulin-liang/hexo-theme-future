@@ -13,6 +13,10 @@ html, body {
     font-weight: 500;
 }
 
+a, a:hover, a:link {
+    text-decoration: none;
+}
+
 * {
     box-shadow: border-box;
 }
@@ -41,6 +45,9 @@ p, span, h5, h6 {
     font-size: 16px;
 }
 
+#content {
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
 
 .parent-size {
     position: absolute;
@@ -60,7 +67,7 @@ p, span, h5, h6 {
 }
 
 .clear-margin {
-    margin: 0;
+    margin: 0 !important;
 }
 
 .clear-padding {
@@ -92,6 +99,10 @@ p, span, h5, h6 {
 
 .clear-float {
     clear: both;
+}
+
+.white-bg {
+    background: white;
 }
 
 
@@ -422,4 +433,53 @@ footer a {
     object-fit: cover;
     overflow: hidden;
     filter: invert(33%) sepia(0%) saturate(0%) hue-rotate(203deg) brightness(95%) contrast(93%);
+}
+
+
+/* ########################## categories_table ################################# */
+
+.categories_table .progress-bar{
+    /* 进度条的槽 */
+    width:70%;
+    /* 设置进度条的高度 */
+    height: 8px;
+    /*进度条外层div的背景色，进度未达到的地方的颜色 */
+    background-color: #f9e1e3;
+    
+    border-radius: 3px;
+}
+
+.categories_table .progress{
+    /* 进度部分 */
+    /* 利用继承父元素宽度的百分比控制进度 */
+    width: 70%;
+    height: 100%;
+    /* 内层背景色即进度达到的颜色 */
+    background-color: #e46a70;
+    border-radius: 3px;
+}
+
+.categories-container {
+    padding: 15px 30px 15px 30px !important;
+}
+
+.categories-container a {
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--font-color);
+}
+
+.categories-container a:hover {
+    text-decoration: none;
+}
+
+.category-item {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: #999999 dotted 1px;
+}
+
+.category-progress-content {
+    font-size: 12px;
+    font-weight: 500;
 }
