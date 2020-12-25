@@ -66,6 +66,12 @@ p, span, h5, h6 {
     background-color: var(--background-color);
 }
 
+
+.secondary-title-color {
+    color: var(--secondary-title-color);
+}
+
+
 .clear-margin {
     margin: 0 !important;
 }
@@ -136,13 +142,13 @@ p, span, h5, h6 {
     background-size: cover;
 }
     .img-container .cover {
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(7, 32, 58, 0.25);
         position: relative;
         top: 0;
         left: 0;
         width: 100%;
         height: 450px;
-        color: white;
+        color: var(--banner-font-color);
     }
 
 /**navigation bar*/
@@ -157,29 +163,25 @@ p, span, h5, h6 {
 }
     .nav-btn li a {
         text-decoration: none;
-        color: #f1f1f1;
+        color: var(--banner-btn-color);
+    }
+
+    .nav-btn i {
+        font-size: 18px;
+        color: var(--banner-btn-color);
+        align-self: center;
     }
 
     .nav-btn li a:hover {
         color: #fafafa;
     }
 
-    .nav-btn li img {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        border-radius: 50%;
-        border:2px solid #000000;
-        filter: invert(100%) sepia(1%) saturate(82%) hue-rotate(35deg) brightness(115%) contrast(89%);
-    }
-
-    .nav-btn li a:hover img {
-        filter: invert(99%) sepia(1%) saturate(76%) hue-rotate(269deg) brightness(117%) contrast(89%);
-    }
+    /* .nav-btn i:hover {
+        color: #fafafa;
+    } */
 
     .nav-btn li span {
         padding-left: 5px;
-        vertical-align: middle;
         font-weight: 800;
     }
 
@@ -190,7 +192,7 @@ p, span, h5, h6 {
     width: 120px;
     transition: All ease-in-out 0.4s;
     padding: 5px;
-    background: #fff;
+    background: var(--banner-font-color);
     box-shadow: 0 0 5px #95a5a6;
 }
     .header .profile-icon img:hover {
@@ -225,7 +227,7 @@ p, span, h5, h6 {
     }
 
     .social-media a:hover img {
-        color: white;
+        color: var(--banner-btn-color);
     }
     
 
@@ -274,13 +276,13 @@ p, span, h5, h6 {
     font-size: 22px;
     font-weight: bold;
     line-height: 1.5; 
-    color: var(--category-color);
+    color: var(--title-color);
     position: relative;
 }
 
 a:hover #title-content {
     color: #21D4FD;
-    background: var(--hover-linear-color);
+    background: var(--title-highlight-linear-bg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

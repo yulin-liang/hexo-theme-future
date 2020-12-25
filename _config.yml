@@ -7,11 +7,11 @@ url: https://yulinliang.com
 subtitle: try to make life better
 
 menus: 
-  主页: /
-  标签: /tags
-  分类: /categories
-  归档: /archive
-  关于: /about
+  主页: / || fa fa-home
+  标签: /tags || fa fa-tags
+  分类: /categories || fa fa-inbox
+  归档: /archive || fa fa-archive
+  关于: /about || fa fa-user
 
 menu_icons:
   主页: images/home.svg

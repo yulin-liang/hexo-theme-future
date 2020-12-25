@@ -1,7 +1,7 @@
 @import "theme.css";
 
 /* #################### 上一页按钮 #################### */
-#article-nav-previous, #article-nav-previous:hover, #article-nav-previous:link {
+#article-nav-previous {
     text-decoration: none;
     color: black;
 }
@@ -10,7 +10,7 @@
     float: left;
     position: relative;
     transition: all .35s;
-    padding: 15px 30px;
+    padding: 15px 15px 15px 30px;
     font-weight: bold;  
 }
 
@@ -22,7 +22,7 @@
     width: 4px;
     height: 100%;
     z-index: 0;
-    background: #ff5964;
+    background: var(--btn-color);
     transition: all .35s;
 }
 
@@ -35,23 +35,23 @@
     z-index: 1;
 }
 
+#article-nav-previous:hover span {
+    color: var(--btn-highlight-color);
+}
+
  #article-nav-previous span::before {
     content: '\00ab';
     position: absolute;
     z-index: 1;
     opacity: 1;
     top: 0;
-    left: -20px;
-    transition: 0.35s;
-  }
-
- #article-nav-previous:hover span {
-    padding-left: 25px;
+    left: -15px;
   }
 
   #article-nav-previous:hover span::before {
       opacity: 1;
-      left: 0;
+      left: -15px;
+      top: 0;
   }
 
 #article-nav-previous:hover::after {
@@ -59,23 +59,27 @@
 }
 
 /* #################### 下一页按钮 #################### */
-#article-nav-next, #article-nav-next:hover, #article-nav-next:link {
+#article-nav-next {
     text-decoration: none;
     color: black;
 }
+
+/* #article-nav-next:hover, #article-nav-next:link {
+    color: var(--btn-highlight-color);
+} */
 
 #article-nav-next {
     float: right;
     position: relative;
     transition: all .35s;
-    padding: 15px 30px;
+    padding: 15px 30px 15px 15px;
     font-weight: bold;  
 }
 
 #article-nav-next.read-more {
     padding: 5px 15px;
     font-size: 12px;
-    color: #ff5964;
+    color: var(--btn-color);
 }
 
 #article-nav-next.read-more span {
@@ -90,7 +94,7 @@
     width: 4px;
     height: 100%;
     z-index: 0;
-    background: #ff5964;
+    background: var(--btn-color);
     transition: all .35s;
 }
 
@@ -103,7 +107,7 @@
     height: 100%;
     z-index: 0;
     /* background: linear-gradient(to right, #ed6ea0, #ff5964); */
-    background: #ff5964;
+    background: var(--btn-color);
     transition: all .35s;
 }
 
@@ -120,12 +124,13 @@
 }
 
 #article-nav-next:hover span {
-    padding-right: 25px;
+    /* padding-right: 25px; */
+    color: var(--btn-highlight-color);
 }
 
 #article-nav-next.read-more:hover span {
     padding-right: 15px;
-    color: white;
+    color: var(--btn-highlight-color);
 }
 
 #article-nav-next span::after {
@@ -133,8 +138,8 @@
     position: absolute;
     opacity: 1;
     top: 0;
-    right: -20px;
-    transition: 0.35s;
+    right: -15px;
+    /* transition: 0.15s; */
 }
 
 #article-nav-next.read-more span::after {
@@ -149,6 +154,14 @@
 #article-nav-next:hover span::after {
     opacity: 1;
     right: 0;
+    top: 0;
+    right: -15px;
+}
+
+#article-nav-next.read-more:hover span::after {
+    opacity: 1;
+    right: 0;
+    top: 0;
 }
 
 /* #################### hover显示上下border的button #################### */

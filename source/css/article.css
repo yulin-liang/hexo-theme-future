@@ -49,7 +49,7 @@
 .article-content-container {
     position: relative;
     top: -250px;
-    margin-bottom: -230px;
+    /* margin-bottom: -230px; */
 }
 
 .post-banner-container {
@@ -220,7 +220,7 @@ blockquote span{
 .post-toc-title {
     font-size: 16px;
     vertical-align: bottom;
-    color: pink;
+    color: var(--secondary-title-color);
 }
 
 .toc {
@@ -240,5 +240,5 @@ blockquote span{
 }
 
 .toc-item.active a, .toc-item.toc-item.active {
-    color: pink;
+    color: var(--secondary-title-color);
 }

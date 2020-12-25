@@ -5,9 +5,12 @@
             <!-- 引导栏 -->
             <ul class="nav justify-content-end nav-btn fixed-top" id="navigation-bar">
                 <% for (var menu in theme.menus) { %>
-                    <li class="nav-item ">
-                        <a href="<%- url_for(theme.menus[menu]) %> ">
-                            <img src="<%= config.root %>./<%- theme.menu_icons[menu] %>"/>
+                    <li class="nav-item">
+                        <%  var segs = theme.menus[menu].split("||") %>
+                        <a href="<%- url_for(segs[0].trim()) %> ">
+                            <% if (segs.length > 1) { %>
+                                <i class="<%- segs[1].trim() %>" aria-hidden="true"></i>
+                            <%  } %> 
                             <span><%= menu %></span>
                         </a>
                     </li>
