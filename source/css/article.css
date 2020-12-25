@@ -48,8 +48,8 @@
 /* ############################# header ########################## */
 .article-content-container {
     position: relative;
-    top: -300px;
-    bottom: -300px;
+    top: -250px;
+    margin-bottom: -230px;
 }
 
 .post-banner-container {
