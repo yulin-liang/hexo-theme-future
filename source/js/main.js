@@ -28,16 +28,16 @@ function registerPostTOC() {
         var link = element.querySelector('a.toc-link');
         var target = document.getElementById(decodeURI(link.getAttribute('href')).replace('#', ''));
         // TOC item animation navigate.
-        // link.addEventListener('click', event => {
-        //   event.preventDefault();
-        //   var offset = target.getBoundingClientRect().top + window.scrollY;
-        //   window.anime({
-        //     targets  : document.scrollingElement,
-        //     duration : 500,
-        //     easing   : 'linear',
-        //     scrollTop: offset + 10
-        //   });
-        // });
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          var offset = target.getBoundingClientRect().top + window.scrollY;
+          window.anime({
+            targets  : document.scrollingElement,
+            duration : 500,
+            easing   : 'linear',
+            scrollTop: offset + 10
+          });
+        });
         return target;
       });
 
