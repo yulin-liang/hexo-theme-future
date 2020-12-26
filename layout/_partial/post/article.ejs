@@ -1,45 +1,46 @@
 <%- partial('article_header.ejs', {post, post}) %> 
-    <div class="container article-content-container">
-        <div class="row justify-content-between">
-            <div class="col-9">
-                <div class="post-card p-4">
-                    <div class="article-content">
-                        <%- post.content %>
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-9">
+            
+            <div class="post-card p-4">
+                <div class="article-content">
+                    <%- post.content %>
+                </div>
+        
+                <% if (theme.enable_gitalk) { %>
+                    <div class="article-comments" id="comments">
+                        <%- partial('comments.ejs') %>
                     </div>
-            
-                    <% if (theme.enable_gitalk) { %>
-                        <div class="article-comments" id="comments">
-                            <%- partial('comments.ejs') %>
-                        </div>
-                    <% } %> 
-            
-                    <%- partial('post_paginator.ejs', {post: post}) %> 
-                </div>
+                <% } %> 
+        
+                <%- partial('post_paginator.ejs', {post: post}) %> 
             </div>
-            <div class="col-3">
-                <div class="container post-card post-toc-container"> 
-                    <% if (toc(page.content).length > 1) { %>
-                        <div class="post-toc-wrap mt-3" id='toc'>
-                            <div class="post-toc">
-                                <div class="post-toc-title">
-                                    <i class="fa fa-list" aria-hidden="true"></i>
-                                    <span><%= __('目录') %></span>
-                                </div>
-                                <%- toc(page.content, {list_number: false}) %>
-                            </div>
-                        </div>
-
-                        <%- js('lib/jquery/jquery-3.5.1.min.js') %>
-                        <%- js('js/main.js') %>  
-                        <script>
-                            registerPostTOC();
-                        </script>
-
-                    <% } %>  
-                </div>
-            </div>
-            <a id="back-to-top" class="btn btn-lg btn-box-shadow" href="#" role="button">
-                <img src="<%= config.root %>./images/back-to-top.svg">
-            </a>
         </div>
+        <div class="col-3">
+            <div class="container post-card post-toc-container"> 
+                <% if (toc(page.content).length > 1) { %>
+                    <div class="post-toc-wrap mt-3" id='toc'>
+                        <div class="post-toc">
+                            <div class="post-toc-title">
+                                <i class="fa fa-list" aria-hidden="true"></i>
+                                <span><%= __('目录') %></span>
+                            </div>
+                            <%- toc(page.content, {list_number: false}) %>
+                        </div>
+                    </div>
+
+                    <%- js('lib/jquery/jquery-3.5.1.min.js') %>
+                    <%- js('js/main.js') %>  
+                    <script>
+                        registerPostTOC();
+                    </script>
+
+                <% } %>  
+            </div>
+        </div>
+        <a id="back-to-top" class="btn btn-lg btn-box-shadow" href="#" role="button">
+            <img src="<%= config.root %>./images/back-to-top.svg">
+        </a>
     </div>
+</div>

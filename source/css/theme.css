@@ -21,6 +21,7 @@
     /* 首页sidebar */
     --secondary-title-color: #3A6D7A;
 
+    --banner-cover-color: rgba(7, 32, 58, 0.25);
     /* 首页banner的字体 */
     --banner-font-color: #ffffff;
     /* 首页banner button的高亮 */
