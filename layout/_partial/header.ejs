@@ -5,8 +5,9 @@
             <!-- 引导栏 -->
             <ul class="nav justify-content-end nav-btn fixed-top" id="navigation-bar">
                 <% for (var menu in theme.menus) { %>
-                    <li class="nav-item">
-                        <%  var segs = theme.menus[menu].split("||") %>
+                    <% var segs = theme.menus[menu].split("||") %>
+                    <% var class_type = is_home() && segs[0].trim() == '/' ? "nav-item vertical-border-btn active" : "nav-item vertical-border-btn" %>
+                    <li class="<%= class_type %>">
                         <a href="<%- url_for(segs[0].trim()) %> ">
                             <% if (segs.length > 1) { %>
                                 <i class="<%- segs[1].trim() %>" aria-hidden="true"></i>

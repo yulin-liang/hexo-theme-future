@@ -46,7 +46,7 @@ p, span, h5, h6 {
 }
 
 #content {
-    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background-image: var(--content-linear-bg);
 }
 
 .parent-size {
@@ -142,7 +142,7 @@ p, span, h5, h6 {
     background-size: cover;
 }
     .img-container .cover {
-        background: rgba(7, 32, 58, 0.25);
+        background: var(--banner-cover-color);
         position: relative;
         top: 0;
         left: 0;
@@ -152,11 +152,22 @@ p, span, h5, h6 {
     }
 
 /**navigation bar*/
-#navigation-bar.scrolled {
-    background-color: white !important;
-    transition: background-color 200ms linear;
-    color: black;
+#navigation-bar {
+    padding: 15px;
 }
+#navigation-bar.scrolled {
+    background-image: var(--sticky-banner-bg-color) !important;
+    transition: background-color 200ms linear;
+}
+
+#navigation-bar.scrolled li a, #navigation-bar.scrolled li i {
+    color: var(--sticky-banner-btn-color);
+}
+
+#navigation-bar.scrolled a:hover, #navigation-bar.scrolled a:hover i {
+    color: var(--sticky-banner-highlight-color);
+}
+
 
 .nav-btn li {
     padding: 5px 20px 5px 20px;

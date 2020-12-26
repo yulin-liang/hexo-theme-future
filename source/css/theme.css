@@ -8,6 +8,9 @@
     --inline-code-bg: #f3f3f3;
     --inline-code-font-color: black;
 
+    /* banner和footer之间的渐变背景色 */
+    --content-linear-bg: linear-gradient(to top, #dfe9f3 0%, white 100%);
+
     /* 正文，toc，首页摘要 */
     --font-color: #4c4948;
     /* 首页摘要的附属信息，如时间，tags etc */
@@ -28,6 +31,13 @@
     --banner-highlight-color: #ffffff;
     /* 首页banner button正常状态颜色 */
     --banner-btn-color: #ffffff;
+    
+    /* banner 置顶之后的背景色 */
+    --sticky-banner-bg-color: linear-gradient(to right, #fff1eb 0%, #dfe9f3 100%);
+    /* 置顶banner的正常状态色 */
+    --sticky-banner-btn-color: #3A6D7A;
+    /* 置顶banner的高亮状态色 */
+    --sticky-banner-highlight-color: #1e5670;
 
     /* 首页read more，文章详情页翻页按钮 */
     --btn-color: #4993a6;
