@@ -1,0 +1,107 @@
+@import "_partial/header.styl";
+@import "_partial/profile_card.styl";
+@import "_utils/card_style.styl";
+@import "_utils/button_style.styl";
+@import "_partial/post_list.styl";
+@import "_partial/footer.styl";
+@import "_partial/category_table.styl";
+@import "_partial/post_content.styl";
+@import "_partial/post_toc.styl";
+
+html, body
+    height: 100%;
+    width: 100%;
+    font-family: 'Helvetica Neue','Helvetica' ,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',
+    '微软雅黑','Arial','sans-serif' !important;
+    min-height: 100%;
+    line-height: 1.5;
+    word-break: break-word;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 500;
+
+*
+    box-shadow: border-box;
+
+h1
+    font-size: 24px;
+
+h2
+    font-size: 22px;
+
+h3
+    font-size: 20px;
+
+h4
+    font-size: 18px;
+
+h5
+    font-size: 16px;
+
+p, span, h5, h6
+    font-size: 16px;
+
+
+#content
+    background-image: content-linear-bg;
+
+
+.parent-size
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+
+.col-border
+    border-left: #555 dotted 1px;
+    border-right: #555 dotted 1px;
+
+.primary-color
+    background-color: background-color;
+
+
+
+.secondary-title-color
+    color: secondary-title-color;
+
+.clear-margin
+    margin: 0 !important;
+
+.clear-padding
+    padding: 0;
+
+.clear-row-padding
+    margin-left: -15px;
+    margin-right: -15px;
+
+.font-bold
+    font-weight: bold;
+
+.font-light
+    font-weight: lighter;
+
+.right-border
+    border-right: black dashed  2px;
+
+.card-style
+    border-radius: 12px;
+    border: #ddd solid 2px;
+    box-shadow: 2px 2px separator-color;
+
+.clear-float
+    clear: both;
+
+.white-bg
+    background: white;
+
+.post-ingredient-bg
+    background-image: linear-gradient(-225deg, #FFFEFF 30%, #dfe9f3 100%) !important;
+
+.post-ingredient-bg.alt
+    background-image: linear-gradient(-225deg, #dfe9f3 00%, #FFFEFF 70%) !important;
+
+.vertical-center
+    display: flex;
+    align-items: center;

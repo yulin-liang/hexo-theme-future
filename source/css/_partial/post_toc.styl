@@ -1,0 +1,34 @@
+@import "../_theme.styl";
+
+.post-toc-container 
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    .post-toc-title 
+        font-size: 16px;
+        font-weight: 550;
+        vertical-align: bottom;
+        color: secondary-title-color;
+    .toc 
+        margin-top: 5px;
+        padding-left: 0;
+        .toc-item 
+            padding-left: 12px;
+            margin-bottom: 5px;
+            list-style-type:none;
+            .toc-text 
+                font-size: 14px;
+                font-weight: 500;
+            a 
+                color: font-color;
+                &:hover
+                    color: black
+            &.active 
+                color: secondary-title-color
+                padding-left: 8px;
+                border-left: 4px solid title-color;
+                background: btn-color;
+                .toc-text 
+                    color: btn-highlight-color;
+                a
+                    color: secondary-title-color

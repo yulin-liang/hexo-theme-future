@@ -6,9 +6,9 @@
             <ul class="nav justify-content-end nav-btn fixed-top" id="navigation-bar">
                 <% for (var menu in theme.menus) { %>
                     <% var segs = theme.menus[menu].split("||") %>
-                    <% var class_type = is_home() && segs[0].trim() == '/' ? "nav-item vertical-border-btn active" : "nav-item vertical-border-btn" %>
-                    <li class="<%= class_type %>">
-                        <a href="<%- url_for(segs[0].trim()) %> ">
+                    <% var class_type = is_home() && segs[0].trim() == '/' ? "vertical-border-btn active" : "vertical-border-btn" %>
+                    <li class="nav-item">
+                        <a class="<%= class_type %>" href="<%- url_for(segs[0].trim()) %> ">
                             <% if (segs.length > 1) { %>
                                 <i class="<%- segs[1].trim() %>" aria-hidden="true"></i>
                             <%  } %> 
@@ -19,7 +19,7 @@
             </ul>
 
             <!-- 头像和名字 -->
-            <div class="container parent-size header-margin">
+            <div class="container header-margin">
                 <div class="container text-center">
                     <div class="profile-icon">
                         <img src="<%= theme.avatar %>">
