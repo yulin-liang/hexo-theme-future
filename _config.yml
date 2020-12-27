@@ -6,6 +6,17 @@ avatar: https://i.loli.net/2020/12/09/liWow1fZmFVJEYO.jpg
 url: https://yulinliang.com
 subtitle: try to make life better
 
+#############################################################
+# 1.运行 hexo new page "(menu_name)"                        
+# 2.打开 source/menu_name/index.md, 添加如下layout语句
+#   layout对应的就是这个menu页面对应的ejs布局文件       
+#   ---                                                    
+#   title: tags
+#   type: tags
+#   layout: categories
+#   ---
+# 3. 把menu_name添加到下面即可
+#############################################################
 menus: 
   主页: / || fa fa-home
   标签: /tags || fa fa-tags
