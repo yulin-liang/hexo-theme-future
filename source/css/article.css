@@ -213,16 +213,35 @@ blockquote span{
 
 .post-toc-title {
     font-size: 16px;
+    font-weight: 600;
     vertical-align: bottom;
     color: var(--secondary-title-color);
 }
 
 .toc {
-    margin-top: 10px;
+    margin-top: 5px;
+    /* background: green; */
+    padding-left: 0;
 }
 
-.toc-item, .toc-text {
-    font-size: 12px;
+.toc-item {
+    padding-left: 12px;
+    margin-bottom: 5px;
+}
+
+.toc-item.active {
+    padding-left: 8px;
+    border-left: 4px solid var(--title-color);
+    background: var(--btn-color);
+}
+
+.toc-item.active .toc-text {
+    color: var(--btn-highlight-color);
+}
+
+.toc-text {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .toc-item a {

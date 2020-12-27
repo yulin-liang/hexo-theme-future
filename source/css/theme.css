@@ -21,6 +21,9 @@
     /* 首页文章标题高亮 */
     --title-highlight-linear-bg: linear-gradient(30deg, #0c7bb3, #f2bae8);
 
+    --link-color: #3A6D7A;
+    --link-hover-color: #1e5670;
+
     /* 首页sidebar */
     --secondary-title-color: #3A6D7A;
 
@@ -43,4 +46,19 @@
     --btn-color: #4993a6;
     /* hover后字体颜色 */
     --btn-highlight-color: #ffffff;
+
+    /*************** tags *************/
+    --tag-1-bg: #47cacc;
+    --tag-2-bg: #638cc9;
+    --tag-3-bg: #cdb3d4;
+    --tag-4-bg: #e7b7c8;
+    --tag-5-bg: #FFBE88;
+    --tag-6-bg: #C6A477;
+    --tag-7-bg: #7097a8;
+    --tag-8-bg: #7E9680;
+    --tag-9-bg: #AE6478;
+    --tag-10-bg: #BAC94A;
+
+    --tag-bg: #eeeeee;
+    --tag-font-color: #666666;
 }
