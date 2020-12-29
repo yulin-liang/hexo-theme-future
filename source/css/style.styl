@@ -8,6 +8,7 @@
 @import "_partial/category_table.styl";
 @import "_partial/post_content.styl";
 @import "_partial/post_toc.styl";
+@import "_partial/archive.styl";
 
 @font-face
     font-family: 'PingFang SC';
@@ -113,3 +114,26 @@ p, span, h5, h6
 .vertical-center
     display: flex;
     align-items: center;
+
+.title-divider 
+    position: relative;
+    font-size: 32px;
+    color: grey-4;
+    text-align: center;
+    height: 45px;
+    &:before 
+        content: "";
+        position: absolute;
+        width:35%;
+        height: 2px;
+        top: 50%;
+        left: 0;
+        background-color: grey-4;
+    &:after 
+        content: "";
+        position: absolute;
+        width: 35%;
+        height: 2px;
+        top: 50%;
+        right: 0;
+        background-color: grey-4;

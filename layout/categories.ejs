@@ -1,11 +1,13 @@
 <%- partial('_partial/header.ejs') %> 
 <% if (site.categories.length){ %>
-    <div class="container" style="margin-bottom: 0; padding-bottom: 0;">
-      <h3 class="asidetitle"><%= __('categories') %></h3>
-        <%- list_categories(site.categories, {
-          show_count: true,
-          class: 'timeline',
-        }) %>
+    <div class="container post-card p-5">
+      <h3 class="title-divider"><%= __('categories') %></h3>
+        <div class="card-narrow-content">
+          <%- list_categories(site.categories, {
+            show_count: true,
+            class: 'timeline',
+          }) %>
+        </div>
     </div>
 <% } %>
     

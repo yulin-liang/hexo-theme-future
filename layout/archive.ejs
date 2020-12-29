@@ -1,7 +1,8 @@
 <%- partial('_partial/header.ejs') %> 
 <% if (site.categories.length){ %>
-    <div class="container" style="margin-bottom: 0; padding-bottom: 0;">
-        <h3 style="margin-bottom: 0;"><%= __('Archives') %></h3>
+    <div class="container post-card p-5">
+        <div class="title-divider"><%= __('Archives') %></div>
+            <div class="card-narrow-content">
         <%
             var posts = [];
             site.posts.each(function(post, index){
@@ -52,6 +53,7 @@
                         </ul>
                     </div>
                 </div>
+            </div>
 
     </div>
 <% } %>
