@@ -1,4 +1,4 @@
-<!-- <div class="card profile-card text-center">
+<div class="container profile-card post-card p-0 text-center">
     <div class="profile-icon mt-4">
         <img src="<%= theme.avatar %>">
     </div>
@@ -25,9 +25,9 @@
         </div>
         
     </div>
-</div> -->
+</div>
 
-<div class="container self-profile-card post-card p-0"> 
+<!-- <div class="container self-profile-card post-card p-0"> 
     <div class="row no-gutters" >
         <div class="col-4 right-border no-gutters p-0" >
             <img src="<%= theme.avatar %>">
@@ -57,11 +57,15 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <% if (theme.enable_tag_cloud && site.tags.length > 3) { %> 
 <div class="container my-3 tag-cloud post-card text-center py-3 secondary-title-color">
     <%- partial('tag_cloud.ejs') %> 
+    <%- list_tags(site.tags, {
+        show_count: false,
+        class: 'smaller-tag',
+      }) %>
 </div>
 <% } %>
 

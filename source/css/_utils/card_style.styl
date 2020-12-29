@@ -11,6 +11,27 @@
     &:hover
         transform: translate(0, -5x);
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    .card-title-with-divider 
+        font: 18px;
+        position: relative;
+        color: grey-5;
+        text-align: center;
+        &:before 
+            content: "";
+            position: absolute;
+            width: 28px;
+            height: 2px;
+            top: 50%;
+            left: 10%;
+            background-color: grey-4;
+        &:after 
+            content: "";
+            position: absolute;
+            width: 28px;
+            height: 2px;
+            top: 50%;
+            right: 10%;
+            background-color: grey-4;
 
 .card-narrow-content 
     width: 60%;
