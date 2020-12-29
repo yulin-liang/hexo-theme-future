@@ -1,0 +1,58 @@
+<%- partial('_partial/header.ejs') %> 
+<% if (site.categories.length){ %>
+    <div class="container" style="margin-bottom: 0; padding-bottom: 0;">
+        <h3 style="margin-bottom: 0;"><%= __('Archives') %></h3>
+        <%
+            var posts = [];
+            site.posts.each(function(post, index){
+                posts.push(post);
+            });
+
+            sortPosts = posts.sort(function(p1, p2) {
+                return new Date(p1['date']) - new Date(p2['date'])
+            });
+        %>
+
+        <%
+            var y = 0, m = 0;
+            sortPosts.forEach(function(post, i){
+                var dt = post.date;
+                var ny = post.date.year();
+                var nm = post.date.month();
+
+                if ((ny !== y || nm !== m) && i > 0) {
+        %> 
+                        </ul>
+                    </div>
+        <%      }
+
+                if (ny !== y) {
+                    y = ny;
+                    m = 0;
+        %>
+
+                <% if (i > 0) { %> </div> <% } %>
+                    <div class="timeline-section">
+                        <h3 class="timeline-section-title"><%=dt.format('YYYY')%></h3>
+                <% } %>
+        <%
+                if(nm !== m) {
+                    m = nm;
+        %>
+                    <div class="timeline-month-section">
+                        <h4 class="timeline-subtitle"><%=dt.format('MMMM')%></h4>
+                        <ul class="archive-month-list">
+        <%  } %>
+                        <li>
+                            <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">
+                                <span><%= post.title %></span>
+                            </a>
+                        </li>
+        <%})%>
+                        </ul>
+                    </div>
+                </div>
+
+    </div>
+<% } %>
+    

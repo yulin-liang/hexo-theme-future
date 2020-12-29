@@ -1,0 +1,104 @@
+@import "../_theme.styl";
+
+.timeslot 
+    width: 75%;
+    float: left;
+    margin: 0 0 30px;
+    padding: 10px 100px 0 0;
+    border-top: 3px solid #ddd;
+    position: relative;
+    span 
+        position: absolute;
+        right: 0;
+        color: #999;
+
+.even 
+    float: right;
+    padding: 10px 0 0 100px;
+    span
+        left: 0;
+
+.timeline-list 
+    *
+        list-style: none;
+    &>.timeline-list-item
+        position: relative;
+        margin-top: 20px;
+        padding: 15px 20px 15px 20px;
+        border-left: 3px solid #999;
+        a
+            font-size: 20px;
+            color: title-color;
+            font-weight: 550;
+        span
+            font-size: 16px;
+            margin-left: 10px;
+            font-weight: 550;
+            color: #666;
+        &:before 
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background:#ff6d6d;
+            border:2px solid #fff;
+            position: absolute;
+            left:-9px
+            top: 22px
+    .timeline-list-child 
+        position: relative;
+        .timeline-list-item
+            margin-top: 20px;
+            a
+                font-size: 16px;
+            span
+                font-size: 12px;
+                margin-left: 10px;
+                font-weight: 550;
+                color: #666;
+
+
+.timeline-section 
+    margin: 50px 0 0px 120px;
+    padding-left: 50px;
+    border-left:4px solid #eee9dc;
+    position: relative;
+    ul 
+        list-style: none;
+        margin-top: 25px;
+        padding-left: 0;
+        margin-bottom: 0;
+        li 
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            position: relative;
+            &:before
+                content: "";
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background:#ff6d6d;
+                position: absolute;
+                left: -54.5px
+                top: 8px
+    .timeline-section-title 
+        left: -160px;
+        top: 5px;
+        line-height: 20px;
+        position: relative;
+    .timeline-subtitle
+        position: relative;
+        &:before
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background:#ff6d6d;
+            border:2px solid #fff;
+            position: absolute;
+            left: -59px
+            top: 7px
