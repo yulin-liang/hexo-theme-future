@@ -1,26 +1,22 @@
 <% if (page.total > 1) {%> 
     <div class="d-flex w-100 justify-content-center my-4">
-    <ul class="pagination index_paginator">
-    <% if (page.current == 1) { %>
-        <li class="page-item disabled">
-            <a class="page-link" href="<%= config.root %><%= page.prev_link %>"><<</a>
-        </li>
-    <% } else { %>
-        <li class="page-item">
-            <a class="page-link" href="<%= config.root %><%= page.prev_link %>"><<</a>
+    <ul class="homepage-paginator">
+    <% if (page.current > 1) { %>
+        <li class="homepage-page-item">
+            <a class="homepage-page-link" href="<%= config.root %><%= page.prev_link %>"><</a>
         </li>
     <% } %>  
 
     <!-- 添加首页 -->
     <% if (page.current - 1 > 1) { %>
-        <li class="page-item">
-            <a class="page-link" href="<%= config.root %>index.html">1</a>
+        <li class="homepage-page-item">
+            <a class="homepage-page-link" href="<%= config.root %>index.html">1</a>
         </li>
     <% } %> 
 
     <!-- 添加首页 -->
     <% if (page.current - 2 > 1) { %>
-        <li class="page-item">
+        <li class="homepage-page-item">
             ...
         </li>
     <% } %> 
@@ -28,37 +24,33 @@
     <% for (var i = Math.max(1, page.current - 1); i <= Math.min(page.total, page.current + 1); i++) { %>
         <% var link = i == 1 ? config.root + "index.html" : config.root + "page/" + i + "/index.html" %> 
         <% if (i == page.current) { %>
-            <li class="page-item active">
-                <a class="page-link" href="<%= link %>"><%= i %></a>
+            <li class="homepage-page-item active">
+                <a class="homepage-page-link" href="<%= link %>"><%= i %></a>
             </li>
         <% } else { %> 
-            <li class="page-item">
-                <a class="page-link" href="<%= link %>"><%= i %></a>
+            <li class="homepage-page-item">
+                <a class="homepage-page-link" href="<%= link %>"><%= i %></a>
             </li>
         <% } %>  
     <% } %> 
 
     <!-- 添加末页 -->
     <% if (page.current + 2 < page.total) { %>
-        <li class="page-item">
+        <li class="homepage-page-item">
             ...
         </li>
     <% } %> 
 
     <!-- 添加末页 -->
     <% if (page.current + 1 < page.total) { %>
-        <li class="page-item">
-            <a class="page-link" href="<%= config.root %>page/<%= page.total %>/index.html"><%= page.total %></a>
+        <li class="homepage-page-item">
+            <a class="homepage-page-link" href="<%= config.root %>page/<%= page.total %>/index.html"><%= page.total %></a>
         </li>
     <% } %> 
 
-    <% if (page.current == page.total) { %>
-        <li class="page-item disabled">
-            <a class="page-link" href="<%= config.root %><%= page.next_link %>">>></a>
-        </li>
-    <% } else { %>
-        <li class="page-item">
-            <a class="page-link" href="<%= config.root %><%= page.next_link %>">>></a>
+    <% if (page.current < page.total) { %>
+        <li class="homepage-page-item">
+            <a class="homepage-page-link" href="<%= config.root %><%= page.next_link %>">></a>
         </li>
     <% } %> 
     </ul>
