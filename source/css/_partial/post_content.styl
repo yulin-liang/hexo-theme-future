@@ -1,7 +1,12 @@
 @import "../_theme.styl";
 
 .article-content
-    padding-bottom: 1rem; 
+    padding-bottom: 1rem;
+    h1, h2, h3
+        padding-bottom: 0.75rem;
+        margin: 1.25rem 0 1.25rem; 
+        font-weight: 700;
+        border-bottom: 1px solid grey-4;
     blockquote 
         padding: 15px 20px !important;
         margin: 20px 0;
@@ -25,7 +30,7 @@
         padding: 3px;
         border: 1px solid #ddd;
         max-width: 100%;
-        margin: 8px auto 8px;
+        margin: 16px auto 16px;
         display: block;
     span
         .img-alt
@@ -48,6 +53,7 @@
         border-radius: 4px; 
     pre 
         border-radius: 8px;
+        margin: 16px auto 16px !important;
     a
         text-decoration: none;
         background: link-background;

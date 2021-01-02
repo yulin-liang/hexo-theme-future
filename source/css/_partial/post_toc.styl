@@ -1,29 +1,31 @@
 @import "../_theme.styl";
 
 .post-toc-container 
+    padding: 12px;
     position: -webkit-sticky;
     position: sticky;
-    top: 20px;
+    top: 70px;
+    ul, ol   
+        padding-left: 0;
     .post-toc-title 
+        margin: 10px 0 10px;
         font-size: 16px;
         font-weight: 550;
         vertical-align: bottom;
         color: secondary-title-color;
     .toc 
-        margin-top: 5px;
-        padding-left: 0;
-        .toc-item 
-            padding-left: 12px;
-            margin-bottom: 5px;
-            list-style-type:none;
-            .toc-text 
+        margin: 0;
+        .toc-item
+            list-style: none;
+            .toc-text
+                padding: 8px 12px 8px;
                 font-size: 14px;
                 font-weight: 500;
             a 
                 color: font-color;
                 &:hover
                     color: black
-            &.active 
+            &.active-current 
                 color: secondary-title-color
                 padding-left: 8px;
                 border-left: 4px solid title-color;

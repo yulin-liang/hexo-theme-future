@@ -37,6 +37,9 @@
             </a>
             <% if (post.categories.length > 0) { %>
                 <% post.categories.each(function(category, index) { %> 
+                    <% if (index != 0) { %>
+                      <span> < </span>
+                    <% } %>
                     <a href="<%- config.root %><%- category.path %>"><span class="badge badge-primary"><%= category.name %></span></a>
                 <% }) %>
             <% } %> 
