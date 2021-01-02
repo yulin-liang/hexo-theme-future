@@ -29,7 +29,7 @@
   </div>
 <% } else { %>
     <!-- 不带自定义图片的layout -->
-    <% var class_type = index % 2 == 0 ? "post-card plain-text-card post-ingredient-bg" : "post-card plain-text-card post-ingredient-bg" %> 
+    <% var class_type = index % 2 == 0 ? "post-card plain-text-card wider-post-ingredient-bg" : "post-card plain-text-card wider-post-ingredient-bg" %> 
     <div class="<%- class_type %>">
         <div class="title">
             <a href="<%- post.link ? url_for(post.link) : url_for(post.path) %> ">

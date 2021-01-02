@@ -1,7 +1,10 @@
 <div class="container profile-card post-card p-0 text-center">
-    <div class="profile-icon mt-4">
-        <img src="<%= theme.avatar %>">
+    <div class="profile-bg-container" style="width: 100%; height: 200px;">
+        <div class="self-profile-icon">
+            <img src="<%= theme.avatar %>">
+        </div>
     </div>
+    
 
     <div class="intro">
         <h5 class="intro-author my-2"><%= theme.author %></h5>
@@ -23,7 +26,6 @@
                 <p class="clear-margin"><%- site.categories.length %> </p>
             </div>
         </div>
-        
     </div>
 </div>
 
@@ -72,3 +74,12 @@
 <div class="container post-card secondary-title-color">
     <%- partial('../_widget/categories_table.ejs') %> 
 </div>
+
+
+<script>
+    var leftBackgroundUrl = '<%- theme.leftBackground %>';
+    var homeLeftAsideNode = document.getElementsByClassName('profile-bg-container')[0];
+    if (homeLeftAsideNode) {
+      homeLeftAsideNode.style.backgroundImage = 'url(' + leftBackgroundUrl + ')';
+    }
+</script>
