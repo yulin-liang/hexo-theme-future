@@ -60,7 +60,7 @@
 </div> -->
 
 <% if (theme.enable_tag_cloud && site.tags.length > 3) { %> 
-<div class="container my-3 tag-cloud post-card text-center py-3 secondary-title-color">
+<div class="container tag-cloud post-card text-center py-3 secondary-title-color">
     <%- partial('tag_cloud.ejs') %> 
     <%- list_tags(site.tags, {
         show_count: false,
@@ -69,6 +69,6 @@
 </div>
 <% } %>
 
-<div class="post-card clear-margin secondary-title-color">
+<div class="container post-card secondary-title-color">
     <%- partial('../_widget/categories_table.ejs') %> 
 </div>
