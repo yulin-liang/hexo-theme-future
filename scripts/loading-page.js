@@ -124,7 +124,7 @@ hexo.extend.filter.register('after_render:html', function (htmlContent) {
        setTimeout(function(){
             const loader = document.getElementById("loading-container");
             loader.className="fadeout" ;//使用渐隐的方法淡出loading page
-            document.getElementById("body-wrap").style.display="flex";
+            // document.getElementById("body-wrap").style.display="flex";
             setTimeout(function(){
                 loader.style.display="none";
             },1000); 
