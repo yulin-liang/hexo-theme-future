@@ -30,7 +30,8 @@
 </div>
 
 <script>
-    var leftBackgroundUrl = '<%- theme.leftBackground %>';
+    '<% url = post.thumbnail ? post.thumbnail : theme.leftBackground %>';
+    var leftBackgroundUrl = '<%- url %>';
     var homeLeftAsideNode = document.getElementsByClassName('article-header-img')[0];
     if (homeLeftAsideNode) {
       homeLeftAsideNode.style.backgroundImage = 'url(' + leftBackgroundUrl + ')';
