@@ -1,6 +1,6 @@
 @import "../_theme.styl";
 
-.smaller-tag-list,
+
 .tag-list 
     padding-left: 0;
     display: flex;
@@ -104,16 +104,26 @@
 
 
 .smaller-tag-list
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
     li
+        list-style: none;
+        display: flex;
+        position: relative;
+        border-radius: 4px;
+        overflow: true
         border: 2px solid grey-4;
         margin: 4px;
         font-size: 12px;
-        span 
-            padding-left: 2px;
-            padding-right: 2px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            font-size: 12px;
+        font-weight: 600;
+        background: white;
         a
-            padding: 4px 8px 4px 8px;
+            color: btn-color;
+            padding: 6px 10px 6px 10px;
+            &:hover
+                color: white
+                text-decoration: none
+        &:hover
+            background: btn-color;
+            
