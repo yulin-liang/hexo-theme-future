@@ -1,10 +1,11 @@
 # hexo-theme-future
 
+Demo: 👍 [YulinLiang](https://yulinliang.com)  || 
+
 ## Install
 ```
-$ git clone https://github.com/yulin-liang/hexo-theme-future.git themes/
+$ git clone https://github.com/yulin-liang/hexo-theme-future.git themes/future
 ```
-future
 
 ## Enable
 Modify theme setting in _config.yml to future.
